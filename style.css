@@ -683,3 +683,9 @@ textarea.form-control {
 }
 
 
+
+@media (max-width: 768px) {
+  .hero h1 br {
+    display: none;
+  }
+}
