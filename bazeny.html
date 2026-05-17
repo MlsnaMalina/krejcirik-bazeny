@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typy bazénů | Krejčiřík Bazény</title>
+    <meta name="description" content="Naše nabídka bazénů zahrnuje laminátové bazény, bazény z těžké fólie a mozaikové bazény.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- AOS Animation Library CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .benefits-box-dark {
+            background: var(--color-deep-water);
+            color: white;
+            border: none;
+            padding: 2.5rem;
+            border-radius: var(--radius-lg);
+        }
+        .benefits-box-dark h3 {
+            color: white !important;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+        .benefits-box-dark ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .benefits-box-dark ul li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            color: rgba(255,255,255,0.9);
+            font-size: 1.05rem;
+        }
+        .benefits-box-dark ul li i {
+            color: white;
+            font-size: 1.25rem;
+            margin-top: 0.1rem;
+            flex-shrink: 0;
+        }
+        
+        .selection-guide-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: var(--radius-lg);
+            border: 1px solid rgba(14, 42, 54, 0.1);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            height: 100%;
+        }
+        .selection-guide-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-glow);
+            border-color: var(--color-pool);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hlavička a navigace -->
+    <header class="header glassmorphism" id="header">
+        <div class="container header-inner">
+            <a href="index.html#domu" class="logo" style="display: flex; align-items: center;"><img src="images/logo.png" alt="Krejčiřík Bazény" style="height: 80px; width: auto; display: block;"></a>
+            <nav class="nav">
+                <a href="index.html#domu">Domů</a>
+                <a href="index.html#sluzby" class="scroll-tab" data-target="tab-bazeny">Bazény</a>
+                <a href="index.html#sluzby" class="scroll-tab" data-target="tab-servis">Servis a péče</a>
+                <a href="index.html#cista-voda">Čistá voda</a>
+                <a href="index.html#realizace">Ukázka naší práce</a>
+                <a href="index.html#o-nas">O nás</a>
+                <a href="#kontakt-cta">Kontakt</a>
+            </nav>
+            <a href="#kontakt-cta" class="btn btn-primary">Pojďme probrat...</a>
+        </div>
+    </header>
+
+    <main class="relative" style="overflow: hidden;">
+        <!-- Plovoucí statické bubliny pro pocit přelévání na celé stránce -->
+        <div class="static-bubble" style="top: 5%; right: -5%; width: 400px; height: 400px; z-index: -1; opacity: 0.5;"></div>
+        <div class="static-bubble" style="top: 25%; left: -2%; width: 250px; height: 250px; z-index: -1; opacity: 0.6;"></div>
+        <div class="static-bubble" style="top: 45%; right: 5%; width: 300px; height: 300px; z-index: -1; opacity: 0.4;"></div>
+        <div class="static-bubble" style="top: 70%; left: 10%; width: 200px; height: 200px; z-index: -1; opacity: 0.5;"></div>
+        <div class="static-bubble" style="top: 85%; right: -2%; width: 350px; height: 350px; z-index: -1; opacity: 0.5;"></div>
+
+        <!-- Hero sekce podstránky -->
+        <section class="hero relative" style="padding: 14rem 0 8rem; background: transparent;">
+            <div class="container" data-aos="fade-up">
+                <h1 style="text-align: center; color: var(--color-deep-water); font-size: 4rem;">Typy bazénů</h1>
+                <div style="text-align: center; max-width: 800px; margin: 0 auto; font-size: 1.25rem;">
+                    <p style="margin: 0 auto 1rem; max-width: 800px;">Vyberte si řešení, které bude odpovídat vašemu prostoru, představě i způsobu používání.</p>
+                    <p style="margin: 0 auto 1rem; max-width: 800px;">Stavíme bazény z těžké fólie, laminátové bazény i mozaikové bazény. Každý typ má jiné přednosti – liší se konstrukcí, možnostmi tvaru, rychlostí realizace i výsledným vzhledem.</p>
+                    <p style="margin: 0 auto 2.5rem; max-width: 800px;">Na této stránce najdete přehled jednotlivých variant, jejich hlavní výhody i technické rozdíly. Pokud si nebudete jistí, rádi s vámi vhodný typ bazénu probereme.</p>
+                </div>
+                <div class="hero-actions" style="justify-content: center; gap: 1.5rem;">
+                    <a href="#kontakt-cta" class="btn btn-primary">Nezávazně probrat vhodný typ bazénu</a>
+                    <a href="#prehled" class="btn btn-outline">Zobrazit jednotlivé typy</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Jaký typ bazénu hledáte? -->
+        <section class="relative" style="padding-bottom: 6rem; padding-top: 0;">
+            <div class="container" data-aos="fade-up">
+                <h2 style="color: var(--color-deep-water); text-align: center; margin-bottom: 1rem;">Jaký typ bazénu hledáte?</h2>
+                <p style="text-align: center; margin: 0 auto 3rem; max-width: 800px; font-size: 1.1rem;">Každé řešení má jiný charakter. Tady je rychlé základní srovnání</p>
+                <div class="grid-3">
+                    <div class="glass-card" style="text-align: center; display: flex; flex-direction: column;">
+                        <h3 style="color: var(--color-pool); margin-bottom: 1rem;">Laminátové bazény</h3>
+                        <p style="font-size: 0.95rem; margin: 0 auto 2rem; flex-grow: 1;">Rychlé a praktické řešení s hotovou skořepinou. Vhodné pro ty, kdo chtějí rychlou instalaci, čistý vzhled a tepelně izolovaný bazén.</p>
+                        <a href="#laminat" class="btn btn-outline" style="align-self: center;">Více informací</a>
+                    </div>
+                    <div class="glass-card" style="text-align: center; display: flex; flex-direction: column;">
+                        <h3 style="color: var(--color-pool); margin-bottom: 1rem;">Bazény z těžké fólie</h3>
+                        <p style="font-size: 0.95rem; margin: 0 auto 2rem; flex-grow: 1;">Variabilní řešení s možností přizpůsobit tvar i rozměry. Hodí se tam, kde je důležitá flexibilita návrhu nebo rekonstrukce staršího bazénu.</p>
+                        <a href="#folie" class="btn btn-outline" style="align-self: center;">Více informací</a>
+                    </div>
+                    <div class="glass-card" style="text-align: center; display: flex; flex-direction: column;">
+                        <h3 style="color: var(--color-pool); margin-bottom: 1rem;">Mozaikové bazény</h3>
+                        <p style="font-size: 0.95rem; margin: 0 auto 2rem; flex-grow: 1;">Reprezentativní a designové řešení s vysokou mírou individuality. Pro projekty, kde je důležitý vzhled, detail a originální provedení.</p>
+                        <a href="#mozaika" class="btn btn-outline" style="align-self: center;">Více informací</a>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 3rem;">
+                    <p style="margin: 0 auto 1rem; max-width: 600px; font-weight: 500;">Nejste si jistí? Pomůžeme vám s výběrem vhodné varianty.</p>
+                    <a href="#kontakt-cta" class="btn btn-primary">Chci poradit s výběrem</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sekce s bazény (Karty) -->
+        <section id="prehled" class="relative" style="padding-bottom: 8rem; padding-top: 0;">
+            <div class="container" style="display: flex; flex-direction: column; gap: 5rem;">
+
+                <!-- Laminátové bazény -->
+                <div id="laminat" class="glass-card" data-aos="fade-up" style="padding: 4rem;">
+                    <h2 style="color: var(--color-deep-water); font-size: 2.5rem; margin-bottom: 3rem; text-align: center;">Laminátové bazény</h2>
+                    <div class="grid-2" style="margin-bottom: 3rem;">
+                        <div>
+                            <p style="font-weight: 500; font-size: 1.1rem; margin-bottom: 2rem; color: var(--color-deep-water); max-width: none;">Laminátový bazén je vhodný pro zákazníky, kteří hledají rychlé, čisté a praktické řešení. Hotový bazén se dopraví na místo a osadí do připraveného prostoru, takže realizace je oproti jiným variantám rychlá.</p>
+                            
+                            <h3 style="color: var(--color-pool); margin-top: 2rem;">Pro koho je vhodný</h3>
+                            <p style="max-width: none;">Laminátový bazén doporučujeme tam, kde je důležitá rychlost realizace, jednoduché a čisté řešení a důraz na pohodlný provoz. Díky tepelné izolaci se hodí jak pro venkovní bazény s delší koupací sezónou, tak pro interiéry, kde pomáhá snižovat provozní náklady.</p>
+                        </div>
+                        <div>
+                            <div class="benefits-box-dark">
+                                <h3>Hlavní výhody:</h3>
+                                <ul>
+                                    <li><i class="ph-fill ph-check-circle"></i> vysoká odolnost a dlouhá životnost,</li>
+                                    <li><i class="ph-fill ph-check-circle"></i> tepelně izolované provedení,</li>
+                                    <li><i class="ph-fill ph-check-circle"></i> rychlá instalace,</li>
+                                    <li><i class="ph-fill ph-check-circle"></i> odolnost vůči vlhkosti,</li>
+                                    <li><i class="ph-fill ph-check-circle"></i> hladké provedení bez spojů a ostrých hran.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Spodní část přes celou šířku -->
+                    <div style="border-top: 1px solid rgba(14, 42, 54, 0.1); padding-top: 3rem;">
+                        <h3 style="color: var(--color-pool); margin-bottom: 1rem;">Technické informace</h3>
+                        <p style="margin-bottom: 2.5rem; max-width: none;">Laminátové bazény se vyrábějí vrstvením skelné tkaniny a polyesterové pryskyřice na formy. Povrch tvoří hladká probarvená vrstva gelcoatu, další vrstvy vytvářejí pevný monolitický skelet. Ten je následně izolován polyuretanem chráněným proti vlhkosti. Výsledkem je pevný a odolný bazén s dlouhou životností. Bazén lze doplnit o protiproud, podvodní osvětlení nebo masážní trysky.</p>
+                        
+                        <h3 style="color: var(--color-pool); margin-bottom: 1rem;">Co je potřeba při realizaci</h3>
+                        <p style="margin-bottom: 0; max-width: none;">Před instalací je nutné posoudit místní podmínky, zejména soudržnost zeminy a výšku spodní vody. Na připravené dno se zhotoví betonová deska, na kterou se bazén osadí. Při napouštění vody se stěny zasypávají zavlhčeným betonem, aby byla zajištěna stabilita konstrukce. V nesoudržné zemině je potřeba použít ocelové sítě.</p>
+                    </div>
+                </div>
+
+                <!-- Bazény z těžké fólie -->
+                <div id="folie" class="glass-card" data-aos="fade-up" style="padding: 4rem;">
+                    <h2 style="color: var(--color-deep-water); font-size: 2.5rem; margin-bottom: 3rem; text-align: center;">Bazény z těžké fólie</h2>
+                    <div class="grid-2" style="margin-bottom: 3rem;">
+                        <div>
+                            <p style="font-weight: 500; font-size: 1.1rem; margin-bottom: 2rem; color: var(--color-deep-water); max-width: none;">Bazén z těžké fólie je vhodný tam, kde je důležitá variabilita tvaru, individuální návrh a možnost přizpůsobení konkrétnímu prostoru. Často je také dobrým řešením při rekonstrukci staršího bazénu.</p>
+                            
+                            <h3 style="color: var(--color-pool); margin-top: 2rem;">Pro koho je vhodný</h3>
+                            <p style="max-width: none;">Tato varianta je vhodná pro zákazníky, kteří nechtějí být omezeni předem daným tvarem a hledají řešení na míru. Dává smysl také tam, kde se řeší rekonstrukce staršího bazénu nebo složitější stavební situace.</p>
+                        </div>
+                        <div>
+                            <div class="benefits-box-dark">
+                                <h3>Hlavní výhody:</h3>
+                                <ul>
+                                    <li><i class="ph-fill ph-check-circle"></i> vysoká odolnost a dlouhá životnost,</li>
+                                    <li><i class="ph-fill ph-check-circle"></i> možnost navrhnout libovolný tvar,</li>
+                                    <li><i class="ph-fill ph-check-circle"></i> protiskluzové řešení na schodech pro vyšší bezpečnost,</li>
+                                    <li><i class="ph-fill ph-check-circle"></i> rychlá výstavba,</li>
+                                    <li><i class="ph-fill ph-check-circle"></i> snadná oprava a údržba.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Spodní část přes celou šířku -->
+                    <div style="border-top: 1px solid rgba(14, 42, 54, 0.1); padding-top: 3rem;">
+                        <h3 style="color: var(--color-pool); margin-bottom: 1rem;">Technické informace</h3>
+                        <p style="margin-bottom: 2.5rem; max-width: none;">Bazény s těžkou fólií mají železobetonovou základnu a stěny z betonových nebo polystyrenových tvarovek vyztužených armaturou a zalitých betonem. Na povrch se pokládá geotextilie a následně těžká bazénová fólie o tloušťce 1,5–1,6 mm, svařovaná přímo v bazénu. Fólie z měkčeného PVC vyztužená tkaninou zajišťuje vysokou pevnost, odolnost proti proražení, UV stabilizaci i antibakteriální úpravu. Hodí se jak pro malé privátní bazény, tak pro velká veřejná koupaliště. U této varianty web uvádí minimální životnost 30 let a záruku 10–15 let na voděodolnost a nepropustnost.</p>
+                        
+                        <h3 style="color: var(--color-pool); margin-bottom: 1rem;">Co je potřeba při realizaci</h3>
+                        <p style="margin-bottom: 0; max-width: none;">Fólie se svařuje přímo na místě a realizace vyžaduje pečlivé plánování. Výhodou je široká variabilita tvarů i možnost nerovnoměrné hloubky dna. U rekonstrukcí starších bazénů je potřeba počítat také s možnou výměnou technologií.</p>
+                    </div>
+                </div>
+
+                <!-- Mozaikové bazény -->
+                <div id="mozaika" class="glass-card" data-aos="fade-up" style="padding: 4rem;">
+                    <h2 style="color: var(--color-deep-water); font-size: 2.5rem; margin-bottom: 3rem; text-align: center;">Mozaikové bazény</h2>
+                    <div class="grid-2" style="margin-bottom: 3rem;">
+                        <div>
+                            <p style="font-weight: 500; font-size: 1.1rem; margin-bottom: 2rem; color: var(--color-deep-water); max-width: none;">Mozaikový bazén je řešení pro zákazníky, kteří kladou mimořádný důraz na vzhled, detail a individuální návrh. Každý projekt může být originál.</p>
+                            
+                            <h3 style="color: var(--color-pool); margin-top: 2rem;">Pro koho je vhodný</h3>
+                            <p style="max-width: none;">Mozaikový bazén je vhodný pro projekty, kde je důležitý výsledný vizuální dojem a možnost vytvořit jedinečné řešení. Hodí se pro zákazníky, kteří nechtějí jen funkční bazén, ale i výrazný architektonický prvek.</p>
+                        </div>
+                        <div>
+                            <div class="benefits-box-dark">
+                                <h3>Hlavní výhody:</h3>
+                                <ul>
+                                    <li><i class="ph-fill ph-check-circle"></i> vysoká odolnost a dlouhá životnost,</li>
+                                    <li><i class="ph-fill ph-check-circle"></i> snadná údržba a čištění,</li>
+                                    <li><i class="ph-fill ph-check-circle"></i> odolnost vůči UV záření a bazénové chemii,</li>
+                                    <li><i class="ph-fill ph-check-circle"></i> neomezené možnosti designu,</li>
+                                    <li><i class="ph-fill ph-check-circle"></i> reprezentativní vzhled.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Spodní část přes celou šířku -->
+                    <div style="border-top: 1px solid rgba(14, 42, 54, 0.1); padding-top: 3rem;">
+                        <h3 style="color: var(--color-pool); margin-bottom: 1rem;">Technické informace</h3>
+                        <p style="margin-bottom: 2.5rem; max-width: none;">Skleněná mozaika umožňuje vytvářet různé vzory a barevné kombinace a dobře se přizpůsobuje tvaru bazénu. Současný web uvádí odolnost vůči UV záření a bazénové chemii, vodotěsnost řešenou speciální spárovací hmotou a hladký povrch, který usnadňuje čištění.</p>
+                        
+                        <h3 style="color: var(--color-pool); margin-bottom: 1rem;">Co je potřeba při realizaci</h3>
+                        <p style="margin-bottom: 0; max-width: none;">Instalace vyžaduje precizní přípravu podkladu a hydroizolace. Mozaika se lepí speciálním flexibilním lepidlem na betonovou konstrukci a následně se pečlivě vyspáruje podle navrženého vzoru.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Jak vybrat správný typ bazénu -->
+        <section class="relative" style="padding: 6rem 0; background: white;">
+            <div class="container" data-aos="fade-up">
+                <h2 style="color: var(--color-deep-water); text-align: center; margin-bottom: 4rem;">Jak vybrat správný typ bazénu</h2>
+                <div class="grid-3" style="margin-bottom: 4rem;">
+                    <div class="selection-guide-card">
+                        <h3 style="color: var(--color-deep-water);">Rychlost a praktičnost</h3>
+                        <p style="font-size: 1rem; color: var(--text-muted); margin-bottom: 0; max-width: none;"><strong>Pokud hledáte co nejrychlejší a praktické řešení,</strong> dává smysl uvažovat o laminátovém bazénu.</p>
+                    </div>
+                    <div class="selection-guide-card">
+                        <h3 style="color: var(--color-deep-water);">Volnost a tvar na míru</h3>
+                        <p style="font-size: 1rem; color: var(--text-muted); margin-bottom: 0; max-width: none;"><strong>Pokud chcete větší volnost v návrhu,</strong> konkrétní tvar na míru nebo řešíte rekonstrukci staršího bazénu, vhodnou cestou bývá bazén z těžké fólie.</p>
+                    </div>
+                    <div class="selection-guide-card">
+                        <h3 style="color: var(--color-deep-water);">Detail a vzhled</h3>
+                        <p style="font-size: 1rem; color: var(--text-muted); margin-bottom: 0; max-width: none;"><strong>Pokud je pro vás rozhodující vzhled, detail a originální provedení,</strong> nejvýraznější variantou je mozaikový bazén.</p>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                    <p style="font-size: 1.2rem; font-weight: 500; color: var(--color-deep-water); margin: 0 auto 0.5rem; max-width: none;">Nejlepší volba vždy závisí na prostoru, představě o výsledku a konkrétní stavební situaci.</p>
+                    <p style="font-size: 1.2rem; font-weight: 500; color: var(--color-deep-water); margin: 0 auto; max-width: none;">Proto má smysl projít výběr ještě před realizací společně.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Jak bude výběr probíhat -->
+        <section class="relative" style="padding: 6rem 0;">
+            <div class="container" data-aos="fade-up">
+                <h2 style="color: var(--color-deep-water); text-align: center; margin-bottom: 4rem;">Jak bude výběr probíhat</h2>
+                <div class="grid-3">
+                    <div class="glass-card" style="text-align: center;">
+                        <div class="card-number-heading" style="color: var(--primary); font-size: 1.1rem; letter-spacing: 2px; font-weight: 600; text-transform: uppercase; margin-bottom: 1rem;">01 / První krok</div>
+                        <h3 style="color: var(--color-deep-water); margin-bottom: 1rem;">Probereme vaši představu</h3>
+                        <p style="font-size: 0.95rem; margin: 0 auto; max-width: none;">Řeknete nám, jaký bazén hledáte, pro jaký prostor a co je pro vás důležité.</p>
+                    </div>
+                    <div class="glass-card" style="text-align: center;">
+                        <div class="card-number-heading" style="color: var(--primary); font-size: 1.1rem; letter-spacing: 2px; font-weight: 600; text-transform: uppercase; margin-bottom: 1rem;">02 / Druhý krok</div>
+                        <h3 style="color: var(--color-deep-water); margin-bottom: 1rem;">Doporučíme vhodné řešení</h3>
+                        <p style="font-size: 0.95rem; margin: 0 auto; max-width: none;">Pomůžeme vám vyhodnotit, který typ bazénu dává ve vaší situaci největší smysl.</p>
+                    </div>
+                    <div class="glass-card" style="text-align: center;">
+                        <div class="card-number-heading" style="color: var(--primary); font-size: 1.1rem; letter-spacing: 2px; font-weight: 600; text-transform: uppercase; margin-bottom: 1rem;">03 / Třetí krok</div>
+                        <h3 style="color: var(--color-deep-water); margin-bottom: 1rem;">Navážeme dalším postupem</h3>
+                        <p style="font-size: 0.95rem; margin: 0 auto; max-width: none;">Podle zvoleného řešení se domluvíme na dalším postupu a podrobnostech realizace.</p>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 5rem;">
+                    <h3 style="color: var(--color-deep-water); margin-bottom: 1.5rem;">Nejste si jistí, který typ bazénu bude pro vás nejlepší?</h3>
+                    <p style="max-width: 600px; margin: 0 auto 2.5rem; font-size: 1.1rem;">Ozvěte se nám. Projdeme s vámi možnosti a doporučíme řešení, které bude odpovídat vašemu prostoru i představě o výsledku.</p>
+                    <a href="#kontakt-cta" class="btn btn-primary">Nezávazně poptat vhodný typ bazénu</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kontaktní formulář stejný jako na hlavní stránce -->
+        <section class="cta-section relative" id="kontakt-cta">
+            <div class="wave-divider wave-top">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,115.54,192.5,99.5,236.4,88.16,280.45,64.04,321.39,56.44Z" class="shape-fill"></path>
+                </svg>
+            </div>
+            
+            <div class="container relative z-10" data-aos="zoom-in" style="padding-top: 2rem; padding-bottom: 2rem;">
+                <div class="grid-2 align-center">
+                    <div class="contact-details text-left">
+                        <h2 style="color: white; margin-bottom: 1.5rem;">Rádi s vámi probereme váš projekt</h2>
+                        <p style="color: white; font-size: 1.1rem; margin-bottom: 2rem; max-width: none;">Máte konkrétní představu, nebo teprve vybíráte? Napište nám nebo zavolejte. Rádi s vámi projdeme, jaký typ bazénu bude ve vašem případě dávat největší smysl.</p>
+                        <div style="margin-bottom: 2rem;">
+                            <p style="color: white; margin-bottom: 0.5rem; font-weight: 500; font-size: 1.1rem;"><i class="ph ph-phone" style="color: var(--color-fog); margin-right: 10px;"></i> 777 067 127</p>
+                            <p style="color: white; margin-bottom: 0.5rem; font-weight: 500; font-size: 1.1rem;"><i class="ph ph-envelope" style="color: var(--color-fog); margin-right: 10px;"></i> info@krejcirikbazeny.cz</p>
+                            <p style="color: white; margin-bottom: 0.5rem; font-weight: 500; font-size: 1.1rem;"><i class="ph ph-map-pin" style="color: var(--color-fog); margin-right: 10px;"></i> K Hrnčířům 216, 149 00 Praha 4, Šeberov</p>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <h3 style="margin-bottom: 1.5rem; color: var(--color-deep-water);">Nezávazná poptávka bazénu</h3>
+                        <form id="poolContactForm2" onsubmit="event.preventDefault(); document.getElementById('poolContactForm2').style.display='none'; document.getElementById('formSuccessMessage2').classList.add('success');">
+                            <div class="form-group">
+                                <label for="name2">Jméno a příjmení</label>
+                                <input type="text" id="name2" class="form-control" required>
+                            </div>
+                            <div class="grid-2" style="gap: 1.5rem;">
+                                <div class="form-group">
+                                    <label for="email2">E-mail</label>
+                                    <input type="email" id="email2" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone2">Telefon</label>
+                                    <input type="tel" id="phone2" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="pool_type2">O jaký typ bazénu máte zájem?</label>
+                                <select id="pool_type2" class="form-control">
+                                    <option value="Laminátový">Laminátové bazény</option>
+                                    <option value="Těžká fólie">Bazény z těžké fólie</option>
+                                    <option value="Mozaikový">Mozaikové bazény</option>
+                                    <option value="Nevím">Zatím vybírám / Nevím</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="priority2">Co je pro vás při výběru důležité?</label>
+                                <input type="text" id="priority2" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="note2">Poznámka</label>
+                                <textarea id="note2" class="form-control" placeholder="Např. rozměr, představa o tvaru, nová realizace / rekonstrukce, termín, doplňující dotaz"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Odeslat nezávaznou poptávku</button>
+                        </form>
+                        <div id="formSuccessMessage2" class="form-message mt-4">
+                            <h4 style="color: var(--color-deep-water); margin-bottom: 0.5rem; font-size: 1.25rem;">Děkujeme, ozvali jste se nám. Vaši zprávu jsme přijali.</h4>
+                            <p style="margin-bottom: 1rem; color: var(--color-deep-water);">Ozveme se vám co nejdříve.</p>
+                            <p style="font-size: 0.95rem; color: var(--color-deep-water);">Pokud máte raději rychlejší domluvu, můžete nám rovnou zavolat na <strong>777 067 127</strong>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="wave-divider wave-bottom">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,115.54,192.5,99.5,236.4,88.16,280.45,64.04,321.39,56.44Z" class="shape-fill-footer"></path>
+                </svg>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Patička -->
+    <footer class="footer">
+        <div class="container grid-3">
+            <div>
+                <a href="index.html#domu" class="logo">Krejčiřík <span>Bazény</span></a>
+                <p class="footer-claim mt-4">Prémiové realizace a profesionální péče o bazény po celé České republice.</p>
+            </div>
+            <div class="footer-nav">
+                <a href="index.html#bazeny">Nové bazény</a>
+                <a href="index.html#servis">Servis a péče</a>
+                <a href="index.html#realizace">Ukázky realizací</a>
+                <a href="#kontakt-cta">Kontaktujte nás</a>
+            </div>
+            <div class="footer-legal text-right">
+                <div class="social-links">
+                    <a href="#"><i class="ph ph-instagram-logo"></i></a>
+                    <a href="#"><i class="ph ph-facebook-logo"></i></a>
+                </div>
+                <p>IČ: 12345678</p>
+                <p>&copy; 2026 Krejčiřík Bazény</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out',
+            once: true,
+            offset: 50
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

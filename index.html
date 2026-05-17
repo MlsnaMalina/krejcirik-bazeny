@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krejčiřík Bazény | Nové bazény a dlouhodobý servis po celé ČR</title>
+    <meta name="description" content="Navrhujeme a realizujeme bazény na míru pro soukromé i komerční projekty. Zajišťujeme dlouhodobý servis, technologie a řešení problémů.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- AOS Animation Library CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Hlavička a navigace -->
+    <header class="header glassmorphism" id="header">
+        <div class="container header-inner">
+            <a href="#domu" class="logo" style="display: flex; align-items: center;"><img src="images/logo.png" alt="Krejčiřík Bazény" style="height: 80px; width: auto; display: block;"></a>
+            <nav class="nav">
+                <a href="#domu">Domů</a>
+                <a href="#sluzby" class="scroll-tab" data-target="tab-bazeny">Bazény</a>
+                <a href="#sluzby" class="scroll-tab" data-target="tab-servis">Servis a péče</a>
+                <a href="#cista-voda">Čistá voda</a>
+                <a href="#realizace">Ukázka naší práce</a>
+                <a href="#o-nas">O nás</a>
+                <a href="#kontakt-cta">Kontakt</a>
+            </nav>
+            <a href="#kontakt-cta" class="btn btn-primary">Pojďme probrat...</a>
+        </div>
+    </header>
+
+    <!-- Blok 1: Hero sekce (Úvodní obrazovka) -->
+    <section class="hero relative" id="domu">
+        <svg class="hero-wave" viewBox="0 0 1440 320" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+            <path class="hero-wave-back" fill="var(--color-deep-water)" opacity="0.10"
+                d="M0,180 C240,220 480,140 720,170 C960,200 1200,250 1440,200 L1440,320 L0,320 Z">
+                <animate attributeName="d" dur="11s" repeatCount="indefinite"
+                    values="M0,180 C240,220 480,140 720,170 C960,200 1200,250 1440,200 L1440,320 L0,320 Z;
+                            M0,190 C240,150 480,210 720,180 C960,150 1200,210 1440,190 L1440,320 L0,320 Z;
+                            M0,180 C240,220 480,140 720,170 C960,200 1200,250 1440,200 L1440,320 L0,320 Z" />
+            </path>
+            <path class="hero-wave-front" fill="var(--color-pool)" opacity="0.15"
+                d="M0,220 C240,180 480,260 720,230 C960,200 1200,240 1440,210 L1440,320 L0,320 Z">
+                <animate attributeName="d" dur="8s" repeatCount="indefinite"
+                    values="M0,220 C240,180 480,260 720,230 C960,200 1200,240 1440,210 L1440,320 L0,320 Z;
+                            M0,210 C240,250 480,200 720,225 C960,250 1200,205 1440,230 L1440,320 L0,320 Z;
+                            M0,220 C240,180 480,260 720,230 C960,200 1200,240 1440,210 L1440,320 L0,320 Z" />
+            </path>
+        </svg>
+        <div class="container grid-2 align-center">
+            <div class="hero-content z-10" data-aos="fade-right">
+                <span class="eyebrow"><i class="ph ph-drop"></i> Špičkové bazény a péče</span>
+                <h1 class="gradient-text">Postavíme váš bazén... a budeme se o něj i dál starat.</h1>
+                <p>Od návrhu přes realizaci po servis a údržbu.</p>
+                <div class="hero-actions mt-4">
+                    <a href="#bazeny" class="btn btn-primary shadow-lg">Naše služby</a>
+                    <a href="#kontakt" class="btn btn-outline"><i class="ph ph-phone"></i> +420 000 000 000</a>
+                </div>
+            </div>
+            
+            <div class="hero-image-wrapper z-10" data-aos="fade-left" data-aos-delay="200">
+                <img src="images/hero_pool.jpg" alt="Luxusní bazén realizace" class="hero-img glass-card">
+            </div>
+        </div>
+    </section>
+
+    <!-- Blok 2: Úvodní rozcestník (Služby na první pohled) -->
+    <section class="quick-nav relative z-10" id="cista-voda">
+        <div class="container grid-3 negative-margin">
+            <!-- Karta 1 -->
+            <div class="card glass-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="card-number-heading">01 / Nová realizace</div>
+                <h3>Chci nový bazén</h3>
+                <ul class="card-list">
+                    <li><i class="ph ph-check"></i> Laminátové bazény</li>
+                    <li><i class="ph ph-check"></i> Bazény z těžké fólie</li>
+                    <li><i class="ph ph-check"></i> Luxusní mozaikové bazény</li>
+                    <li><i class="ph ph-check"></i> Technologie slané vody</li>
+                </ul>
+                <a href="#bazeny" class="card-link">Zobrazit realizace <i class="ph ph-arrow-right"></i></a>
+            </div>
+            <!-- Karta 2 -->
+            <div class="card glass-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="card-number-heading">02 / Servis a péče</div>
+                <h3>Potřebuji servis a péči</h3>
+                <ul class="card-list">
+                    <li><i class="ph ph-check"></i> Zazimování bazénů</li>
+                    <li><i class="ph ph-check"></i> Jarní odzimování</li>
+                    <li><i class="ph ph-check"></i> Pravidelné čištění</li>
+                    <li><i class="ph ph-check"></i> Údržba technologií</li>
+                </ul>
+                <a href="#servis" class="card-link">Servisní služby <i class="ph ph-arrow-right"></i></a>
+            </div>
+            <!-- Karta 3 -->
+            <div class="card glass-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="card-number-heading">03 / Řešení problémů</div>
+                <h3>Mám problém s bazénem</h3>
+                <p>Únik vody, zelená voda, porucha filtrace nebo tepelného čerpadla. Rychlá diagnostika a oprava.</p>
+                <a href="#kontakt" class="card-link">Vyřešit problém <i class="ph ph-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blok 2b: Detaily služeb (Tabs) -->
+    <section class="service-details relative" id="sluzby" style="padding-top: 4rem; padding-bottom: 4rem; overflow: hidden;">
+        <!-- Statické bubliny v pozadí -->
+        <div class="static-bubble" style="top: 15%; right: 2%; width: 200px; height: 200px; z-index: 0; opacity: 0.7;"></div>
+        <div class="static-bubble" style="top: 65%; left: 3%; width: 70px; height: 70px; z-index: 0;"></div>
+        <div class="static-bubble" style="top: 85%; right: 12%; width: 45px; height: 45px; z-index: 0;"></div>
+        
+        <div class="container relative" data-aos="fade-up" style="z-index: 10;">
+            <div class="tabs-header">
+                <button class="tab-btn active" data-tab="tab-bazeny">Typy bazénů</button>
+                <button class="tab-btn" data-tab="tab-servis">Servis a péče</button>
+            </div>
+            
+            <div class="tabs-content">
+                <!-- Tab: Typy bazénů -->
+                <div class="tab-pane active" id="tab-bazeny">
+                    <div class="grid-2">
+                        <div class="detail-card glass-card">
+                            <h3>Laminátové bazény</h3>
+                            <p>Jednoduché a praktické řešení. Předpřipravený bazén pouze dovezeme a umístíme do předem vykopané díry.</p>
+                            <a href="bazeny.html" class="card-link">Zobrazit typy bazénů <i class="ph ph-arrow-right"></i></a>
+                        </div>
+                        <div class="detail-card glass-card">
+                            <h3>Bazény z těžké fólie</h3>
+                            <p>Bazény z těžké fólie jsou vysoce odolné a flexibilní, zajišťují spolehlivou vodotěsnost a lze je přizpůsobit jakémukoli tvaru.</p>
+                            <a href="bazeny.html" class="card-link">Zobrazit typy bazénů <i class="ph ph-arrow-right"></i></a>
+                        </div>
+                        <div class="detail-card glass-card">
+                            <h3>Mozaikové bazény</h3>
+                            <p>Mozaikové bazény vynikají luxusním designem a mimořádnou odolností. Skleněná mozaika je ideální pro své antibakteriální vlastnosti a snadnou údržbu, navíc umožňuje vytvořit jakýkoli vzor.</p>
+                            <a href="bazeny.html" class="card-link">Zobrazit typy bazénů <i class="ph ph-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div style="text-align: center; margin-top: 3rem;">
+                        <a href="bazeny.html" class="btn btn-primary">Více informací o bazénech</a>
+                    </div>
+                </div>
+
+                <!-- Tab: Servis a péče -->
+                <div class="tab-pane" id="tab-servis">
+                    <div class="grid-2">
+                        <div class="detail-card glass-card">
+                            <h3>Zazimování</h3>
+                            <p>Nabízíme kompletní zazimování vašeho bazénu, abyste se nemuseli obávat mrazivých měsíců. Postaráme se o správné ošetření vody, kontrolu a zabezpečení technologií i přípravu konstrukce na zimu.</p>
+                            <a href="#kontakt-cta" class="card-link">Chci poradit s výběrem <i class="ph ph-arrow-right"></i></a>
+                        </div>
+                        <div class="detail-card glass-card">
+                            <h3>Odzimování</h3>
+                            <p>Zajistíme odborné odzimování bazénu pro hladký start nové sezony. Služba zahrnuje důkladné čištění, kontrolu technologií a jejich uvedení do provozu.</p>
+                            <a href="#kontakt-cta" class="card-link">Chci poradit s výběrem <i class="ph ph-arrow-right"></i></a>
+                        </div>
+                        <div class="detail-card glass-card">
+                            <h3>Čištění</h3>
+                            <p>Díky naší službě čištění bazénu bude vaše voda vždy křišťálově čistá a hygienicky nezávadná. Zaměřujeme se na odstranění všech nečistot, péči o filtrační systém a pravidelnou kontrolu kvality vody.</p>
+                            <a href="#kontakt-cta" class="card-link">Chci poradit s výběrem <i class="ph ph-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blok 4: Nové realizace -->
+    <section class="services bg-light relative" id="bazeny">
+        <div class="container section-header text-center" data-aos="fade-up">
+            <h2 class="gradient-text">Nové bazény pro každou situaci</h2>
+            <p style="margin: 0 auto;">Od rodinných domů po komerční projekty. Najdeme variantu, která vizuálně obohatí váš prostor a zároveň bude spolehlivě fungovat.</p>
+        </div>
+        
+        <div class="container grid-3 mt-4">
+            <div class="card premium-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="card-img-box">
+                    <img src="images/hero_pool.png" alt="Typy bazénů">
+                    <div class="card-overlay"><i class="ph ph-magnifying-glass-plus"></i></div>
+                </div>
+                <div class="card-body">
+                    <h3>Bazény na míru</h3>
+                    <p>Laminátové bazény, bazény z těžké fólie a prémiové mozaikové bazény pro individuální design.</p>
+                </div>
+            </div>
+            <div class="card premium-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="card-img-box">
+                    <img src="images/crystal_water.png" alt="Slaná voda">
+                    <div class="card-overlay"><i class="ph ph-drop"></i></div>
+                </div>
+                <div class="card-body">
+                    <h3>Slaná voda a technologie</h3>
+                    <p>Šetrnější k pokožce i očím, ekologičtější a celkově pohodlnější způsob celoročního provozu.</p>
+                </div>
+            </div>
+            <div class="card premium-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="card-img-box">
+                    <img src="images/pool_enclosure.png" alt="Zastřešení">
+                    <div class="card-overlay"><i class="ph ph-house-line"></i></div>
+                </div>
+                <div class="card-body">
+                    <h3>Zastřešení bazénu</h3>
+                    <p>Křišťálově čistá voda, výrazně delší koupací sezóna a bezpečnost pro děti i domácí zvířata.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container text-center mt-4" data-aos="fade-up">
+            <h3 style="color: var(--color-deep-water); margin-bottom: 1.5rem;">Nejste si jistí, které řešení je vhodné pro váš prostor?</h3>
+            <a href="#kontakt-cta" class="btn btn-primary">Nezávazně probrat vhodný typ bazénu</a>
+        </div>
+    </section>
+
+    <!-- Blok 3: Proč právě Krejčiřík Bazény -->
+    <section class="about-brief" id="o-nas">
+        <div class="container grid-2 align-center">
+            <div class="content-left" data-aos="fade-right">
+                <h2 class="gradient-text">Bazén nemá dobře vypadat jen při předání. Má dobře fungovat i dál.</h2>
+                <p>Nesoustředíme se jen na samotnou stavbu. Zásadní je pro nás bezproblémový dlouhodobý provoz, špičkové technologie a precizní péče, která rozhoduje o tom, jaký zážitek vám bazén skutečně přinese.</p>
+            </div>
+            <div class="content-right benefits-list" data-aos="fade-left">
+                <div class="benefit-item glass-card hover-glow">
+                    <div class="benefit-icon"><i class="ph ph-check-circle"></i></div>
+                    <div class="benefit-text">
+                        <span>Realizace i servis v jednom místě</span>
+                        <p>Bazén neřešíme jen do předání. Pomůžeme i s provozem, sezónní péčí a technologií.</p>
+                    </div>
+                </div>
+                <div class="benefit-item glass-card hover-glow">
+                    <div class="benefit-icon"><i class="ph ph-arrows-merge"></i></div>
+                    <div class="benefit-text">
+                        <span>Řešení pro nové i stávající bazény</span>
+                        <p>Pomůžeme vám jak s novou realizací, tak s úpravami, servisem nebo technologií u stávajícího bazénu.</p>
+                    </div>
+                </div>
+                <div class="benefit-item glass-card hover-glow">
+                    <div class="benefit-icon"><i class="ph ph-trend-up"></i></div>
+                    <div class="benefit-text">
+                        <span>Praktický a moderní přístup</span>
+                        <p>Navrhujeme řešení, která dávají smysl technicky, provozně i v běžném používání.</p>
+                    </div>
+                </div>
+                <div class="benefit-item glass-card hover-glow">
+                    <div class="benefit-icon"><i class="ph ph-map-pin"></i></div>
+                    <div class="benefit-text">
+                        <span>Působnost po celé České republice</span>
+                        <p>Pracujeme pro klienty po celé České republice a umíme se přizpůsobit typu projektu i lokalitě.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blok 5: Portfolio a Realizace -->
+    <section class="portfolio-showcase relative" id="realizace" style="padding: 6rem 0; background: var(--color-paper); z-index: 5;">
+        <div class="container text-center" data-aos="fade-up">
+            <h2 class="gradient-text" style="margin-bottom: 3rem;">Ukázka naší práce</h2>
+            <div class="carousel-wrapper relative">
+                <button class="carousel-btn prev-btn"><i class="ph ph-caret-left"></i></button>
+                <button class="carousel-btn next-btn"><i class="ph ph-caret-right"></i></button>
+                
+                <div class="carousel-track-container" style="border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-md);">
+                    <ul class="carousel-track">
+                        <li class="carousel-slide current-slide">
+                            <div class="before-after-wrapper">
+                                <img src="images/bazen-01-po.jpeg" class="img-after" alt="Bazén Po realizaci">
+                                <img src="images/bazen-01-pred.jpeg" class="img-before" alt="Bazén Před realizací">
+                                <input type="range" min="0" max="100" value="50" class="slider-range">
+                                <div class="slider-handle"><i class="ph ph-arrows-left-right"></i></div>
+                                <div class="slider-labels"><span class="label-before">Před</span><span class="label-after">Po</span></div>
+                            </div>
+                        </li>
+                        <li class="carousel-slide">
+                            <div class="before-after-wrapper">
+                                <img src="images/bazen-02-po.jpeg" class="img-after" alt="Bazén Po realizaci">
+                                <img src="images/bazen-02-pred.jpeg" class="img-before" alt="Bazén Před realizací">
+                                <input type="range" min="0" max="100" value="50" class="slider-range">
+                                <div class="slider-handle"><i class="ph ph-arrows-left-right"></i></div>
+                                <div class="slider-labels"><span class="label-before">Před</span><span class="label-after">Po</span></div>
+                            </div>
+                        </li>
+                        <li class="carousel-slide">
+                            <div class="before-after-wrapper">
+                                <img src="images/bazen-03-po.jpeg" class="img-after" alt="Bazén Po realizaci">
+                                <img src="images/bazen-03-pred.jpeg" class="img-before" alt="Bazén Před realizací">
+                                <input type="range" min="0" max="100" value="50" class="slider-range">
+                                <div class="slider-handle"><i class="ph ph-arrows-left-right"></i></div>
+                                <div class="slider-labels"><span class="label-before">Před</span><span class="label-after">Po</span></div>
+                            </div>
+                        </li>
+                        <li class="carousel-slide">
+                            <div class="before-after-wrapper">
+                                <img src="images/bazen-04-po.jpeg" class="img-after" alt="Bazén Po realizaci">
+                                <img src="images/bazen-04-pred.jpeg" class="img-before" alt="Bazén Před realizací">
+                                <input type="range" min="0" max="100" value="50" class="slider-range">
+                                <div class="slider-handle"><i class="ph ph-arrows-left-right"></i></div>
+                                <div class="slider-labels"><span class="label-before">Před</span><span class="label-after">Po</span></div>
+                            </div>
+                        </li>
+                        <li class="carousel-slide">
+                            <div class="before-after-wrapper">
+                                <img src="images/bazen-05-po.jpeg" class="img-after" alt="Bazén Po realizaci">
+                                <img src="images/bazen-05-pred.jpeg" class="img-before" alt="Bazén Před realizací">
+                                <input type="range" min="0" max="100" value="50" class="slider-range">
+                                <div class="slider-handle"><i class="ph ph-arrows-left-right"></i></div>
+                                <div class="slider-labels"><span class="label-before">Před</span><span class="label-after">Po</span></div>
+                            </div>
+                        </li>
+                        <li class="carousel-slide">
+                            <div class="before-after-wrapper">
+                                <img src="images/bazen-06-po.jpeg" class="img-after" alt="Bazén Po realizaci">
+                                <img src="images/bazen-06-pred.jpeg" class="img-before" alt="Bazén Před realizací">
+                                <input type="range" min="0" max="100" value="50" class="slider-range">
+                                <div class="slider-handle"><i class="ph ph-arrows-left-right"></i></div>
+                                <div class="slider-labels"><span class="label-before">Před</span><span class="label-after">Po</span></div>
+                            </div>
+                        </li>
+                        <li class="carousel-slide">
+                            <div class="before-after-wrapper">
+                                <img src="images/bazen-07-po.jpeg" class="img-after" alt="Bazén Po realizaci">
+                                <img src="images/bazen-07-pred.jpeg" class="img-before" alt="Bazén Před realizací">
+                                <input type="range" min="0" max="100" value="50" class="slider-range">
+                                <div class="slider-handle"><i class="ph ph-arrows-left-right"></i></div>
+                                <div class="slider-labels"><span class="label-before">Před</span><span class="label-after">Po</span></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="carousel-nav mt-4">
+                    <button class="carousel-indicator current-indicator"></button>
+                    <button class="carousel-indicator"></button>
+                    <button class="carousel-indicator"></button>
+                    <button class="carousel-indicator"></button>
+                    <button class="carousel-indicator"></button>
+                    <button class="carousel-indicator"></button>
+                    <button class="carousel-indicator"></button>
+                </div>
+            </div>
+            </div>
+            
+            <!-- Grid galerie technologií -->
+            <div class="container text-center mt-6" data-aos="fade-up" style="margin-top: 5rem;">
+                <h3 class="gradient-text" style="margin-bottom: 2rem;">Ukázka realizace technologií</h3>
+                <div class="grid-3" style="gap: 1.5rem;">
+                    <div class="gallery-item glass-card" style="padding: 0; overflow: hidden; cursor: pointer; border-radius: var(--radius-lg);">
+                        <img src="images/tech-01.jpeg" alt="Realizace 1">
+                        <div class="gallery-overlay"><i class="ph ph-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="gallery-item glass-card" style="padding: 0; overflow: hidden; cursor: pointer; border-radius: var(--radius-lg);">
+                        <img src="images/tech-02.jpeg" alt="Realizace 2">
+                        <div class="gallery-overlay"><i class="ph ph-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="gallery-item glass-card" style="padding: 0; overflow: hidden; cursor: pointer; border-radius: var(--radius-lg);">
+                        <img src="images/tech-03.jpeg" alt="Realizace 3">
+                        <div class="gallery-overlay"><i class="ph ph-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="gallery-item glass-card" style="padding: 0; overflow: hidden; cursor: pointer; border-radius: var(--radius-lg);">
+                        <img src="images/tech-04.jpeg" alt="Realizace 4">
+                        <div class="gallery-overlay"><i class="ph ph-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="gallery-item glass-card" style="padding: 0; overflow: hidden; cursor: pointer; border-radius: var(--radius-lg);">
+                        <img src="images/tech-05.jpeg" alt="Realizace 5">
+                        <div class="gallery-overlay"><i class="ph ph-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="gallery-item glass-card" style="padding: 0; overflow: hidden; cursor: pointer; border-radius: var(--radius-lg);">
+                        <img src="images/tech-06.jpeg" alt="Realizace 6">
+                        <div class="gallery-overlay"><i class="ph ph-magnifying-glass-plus"></i></div>
+                    </div>
+                </div>
+            </div>
+            
+    </section>
+
+    <!-- Zbytek bloků s glassmorphism a AOS. -->
+    <section class="cta-section relative" id="kontakt-cta">
+        <!-- Přelévání bílé shora dolů do modré CTA -->
+        <div class="wave-divider wave-top">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,115.54,192.5,99.5,236.4,88.16,280.45,64.04,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+        
+        <div class="container relative z-10" data-aos="zoom-in">
+            <div class="grid-2 align-center">
+                <div class="contact-details text-left">
+                    <h2 style="color: white; margin-bottom: 1.5rem;">Rádi s vámi probereme váš projekt</h2>
+                    <p style="color: white; font-size: 1.1rem; margin-bottom: 2rem; max-width: none;">Máte konkrétní představu, nebo teprve vybíráte? Napište nám nebo zavolejte. Rádi s vámi projdeme, jaký typ bazénu bude ve vašem případě dávat největší smysl.</p>
+                    <div style="margin-bottom: 2rem;">
+                        <p style="color: white; margin-bottom: 0.5rem; font-weight: 500; font-size: 1.1rem;"><i class="ph ph-phone" style="color: var(--color-fog); margin-right: 10px;"></i> 777 067 127</p>
+                        <p style="color: white; margin-bottom: 0.5rem; font-weight: 500; font-size: 1.1rem;"><i class="ph ph-envelope" style="color: var(--color-fog); margin-right: 10px;"></i> info@krejcirikbazeny.cz</p>
+                        <p style="color: white; margin-bottom: 0.5rem; font-weight: 500; font-size: 1.1rem;"><i class="ph ph-map-pin" style="color: var(--color-fog); margin-right: 10px;"></i> K Hrnčířům 216, 149 00 Praha 4, Šeberov</p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Nezávazná poptávka bazénu</h3>
+                    <form id="poolContactForm">
+                        <div class="form-group">
+                            <label for="name">Jméno a příjmení</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="grid-2" style="gap: 1.5rem;">
+                            <div class="form-group">
+                                <label for="email">E-mail</label>
+                                <input type="email" id="email" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Telefon</label>
+                                <input type="tel" id="phone" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="pool_type">O jaký typ bazénu máte zájem?</label>
+                            <select id="pool_type" class="form-control">
+                                <option value="Laminátový">Laminátové bazény</option>
+                                <option value="Těžká fólie">Bazény z těžké fólie</option>
+                                <option value="Mozaikový">Mozaikové bazény</option>
+                                <option value="Nevím">Zatím vybírám / Nevím</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="priority">Co je pro vás při výběru důležité?</label>
+                            <input type="text" id="priority" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="note">Poznámka</label>
+                            <textarea id="note" class="form-control" placeholder="Např. rozměr, představa o tvaru, nová realizace / rekonstrukce, termín, doplňující dotaz"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Odeslat nezávaznou poptávku</button>
+                    </form>
+                    <div id="formSuccessMessage" class="form-message mt-4">
+                        <h4 style="color: var(--color-deep-water); margin-bottom: 0.5rem; font-size: 1.25rem;">Děkujeme, ozvali jste se nám. Vaši zprávu jsme přijali.</h4>
+                        <p style="margin-bottom: 1rem; color: var(--color-deep-water);">Ozveme se vám co nejdříve.</p>
+                        <p style="font-size: 0.95rem; color: var(--color-deep-water);">Pokud máte raději rychlejší domluvu, můžete nám rovnou zavolat na <strong>777 067 127</strong>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Přelévání barevných bloků - Vlna z modré do černé patičky -->
+        <div class="wave-divider wave-bottom">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,115.54,192.5,99.5,236.4,88.16,280.45,64.04,321.39,56.44Z" class="shape-fill-footer"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Statické fotorealistické bubliny po celém webu -->
+    <div class="static-bubble" style="top: 4%; right: 20%; width: 30px; height: 30px;"></div>
+    <div class="static-bubble" style="top: 7%; right: 8%; width: 60px; height: 60px;"></div>
+    <div class="static-bubble" style="top: 10%; left: 25%; width: 25px; height: 25px;"></div>
+    <div class="static-bubble" style="top: 15%; left: 85%; width: 90px; height: 90px;"></div>
+    <div class="static-bubble" style="top: 20%; right: 30%; width: 40px; height: 40px;"></div>
+    <div class="static-bubble" style="top: 25%; left: 15%; width: 150px; height: 150px;"></div>
+    <div class="static-bubble" style="top: 28%; left: 45%; width: 20px; height: 20px;"></div>
+    <div class="static-bubble" style="top: 32%; right: 5%; width: 35px; height: 35px;"></div>
+    <div class="static-bubble" style="top: 38%; right: 12%; width: 80px; height: 80px;"></div>
+    <div class="static-bubble" style="top: 41%; left: 35%; width: 50px; height: 50px;"></div>
+    <div class="static-bubble" style="top: 45%; left: 5%; width: 110px; height: 110px;"></div>
+    <div class="static-bubble" style="top: 48%; right: 40%; width: 25px; height: 25px;"></div>
+    <div class="static-bubble" style="top: 52%; left: 60%; width: 45px; height: 45px;"></div>
+    <div class="static-bubble" style="top: 58%; right: 25%; width: 70px; height: 70px;"></div>
+    <div class="static-bubble" style="top: 61%; left: 20%; width: 30px; height: 30px;"></div>
+    <div class="static-bubble" style="top: 65%; left: 12%; width: 140px; height: 140px;"></div>
+    <div class="static-bubble" style="top: 68%; right: 10%; width: 20px; height: 20px;"></div>
+    <div class="static-bubble" style="top: 72%; left: 50%; width: 35px; height: 35px;"></div>
+    <div class="static-bubble" style="top: 78%; right: 5%; width: 100px; height: 100px;"></div>
+    <div class="static-bubble" style="top: 82%; left: 30%; width: 40px; height: 40px;"></div>
+    <div class="static-bubble" style="top: 88%; left: 20%; width: 85px; height: 85px;"></div>
+    <div class="static-bubble" style="top: 92%; right: 35%; width: 25px; height: 25px;"></div>
+    <div class="static-bubble" style="top: 96%; right: 15%; width: 130px; height: 130px;"></div>
+    <div class="static-bubble" style="top: 98%; left: 45%; width: 30px; height: 30px;"></div>
+
+    <!-- Patička -->
+    <footer class="footer">
+        <div class="container grid-3">
+            <div data-aos="fade-up">
+                <a href="#" class="logo">Krejčiřík <span>Bazény</span></a>
+                <p class="footer-claim mt-4">Prémiové realizace a profesionální péče o bazény po celé České republice.</p>
+            </div>
+            <div class="footer-nav" data-aos="fade-up" data-aos-delay="100">
+                <a href="#bazeny">Nové bazény</a>
+                <a href="#servis">Servis a péče</a>
+                <a href="#realizace">Ukázky realizací</a>
+                <a href="#kontakt">Kontaktujte nás</a>
+            </div>
+            <div class="footer-legal text-right" data-aos="fade-up" data-aos-delay="200">
+                <div class="social-links">
+                    <a href="#"><i class="ph ph-instagram-logo"></i></a>
+                    <a href="#"><i class="ph ph-facebook-logo"></i></a>
+                </div>
+                <p>IČ: 12345678</p>
+                <p>&copy; 2026 Krejčiřík Bazény</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal pro fotogalerii -->
+    <div id="lightbox" class="lightbox-modal">
+        <span class="lightbox-close">&times;</span>
+        <button class="lightbox-btn lightbox-prev"><i class="ph ph-caret-left"></i></button>
+        <img class="lightbox-img" src="" alt="Zvětšený obrázek">
+        <button class="lightbox-btn lightbox-next"><i class="ph ph-caret-right"></i></button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

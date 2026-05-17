@@ -1,0 +1,135 @@
+    <!-- Blok 5: Portfolio a Realizace -->
+    <section class="portfolio-showcase relative" id="realizace" style="padding: 6rem 0; background: var(--color-paper); z-index: 5;">
+        
+        <!-- Část 1: Before & After -->
+        <div class="container text-center" data-aos="fade-up">
+            <h2 class="gradient-text" style="margin-bottom: 3rem;">Naše realizace mluví za nás</h2>
+            
+            <div class="carousel-wrapper relative">
+                <!-- Vlastní šipky -->
+                <button class="carousel-btn prev-btn"><i class="ph ph-caret-left"></i></button>
+                <button class="carousel-btn next-btn"><i class="ph ph-caret-right"></i></button>
+                
+                <div class="carousel-track-container" style="border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-md);">
+                    <ul class="carousel-track">
+                        <!-- Položky karuselu 1-7 -->
+                        <li class="carousel-slide current-slide">
+                            <div class="before-after-wrapper">
+                                <img src="images/bazen-01-po.jpg" class="img-after" alt="Bazén Po realizaci" onerror="this.src='https://placehold.co/1200x800/0E2A36/FFFFFF?text=bazen-01-po.jpg'">
+                                <img src="images/bazen-01-pred.jpg" class="img-before" alt="Bazén Před realizací" onerror="this.src='https://placehold.co/1200x800/DCE7EC/0E2A36?text=bazen-01-pred.jpg'">
+                                <input type="range" min="0" max="100" value="50" class="slider-range">
+                                <div class="slider-handle"><i class="ph ph-arrows-left-right"></i></div>
+                                <div class="slider-labels"><span class="label-before">Před</span><span class="label-after">Po</span></div>
+                            </div>
+                        </li>
+                        <li class="carousel-slide">
+                            <div class="before-after-wrapper">
+                                <img src="images/bazen-02-po.jpg" class="img-after" alt="Bazén Po realizaci" onerror="this.src='https://placehold.co/1200x800/0E2A36/FFFFFF?text=bazen-02-po.jpg'">
+                                <img src="images/bazen-02-pred.jpg" class="img-before" alt="Bazén Před realizací" onerror="this.src='https://placehold.co/1200x800/DCE7EC/0E2A36?text=bazen-02-pred.jpg'">
+                                <input type="range" min="0" max="100" value="50" class="slider-range">
+                                <div class="slider-handle"><i class="ph ph-arrows-left-right"></i></div>
+                                <div class="slider-labels"><span class="label-before">Před</span><span class="label-after">Po</span></div>
+                            </div>
+                        </li>
+                        <li class="carousel-slide">
+                            <div class="before-after-wrapper">
+                                <img src="images/bazen-03-po.jpg" class="img-after" alt="Bazén Po realizaci" onerror="this.src='https://placehold.co/1200x800/0E2A36/FFFFFF?text=bazen-03-po.jpg'">
+                                <img src="images/bazen-03-pred.jpg" class="img-before" alt="Bazén Před realizací" onerror="this.src='https://placehold.co/1200x800/DCE7EC/0E2A36?text=bazen-03-pred.jpg'">
+                                <input type="range" min="0" max="100" value="50" class="slider-range">
+                                <div class="slider-handle"><i class="ph ph-arrows-left-right"></i></div>
+                                <div class="slider-labels"><span class="label-before">Před</span><span class="label-after">Po</span></div>
+                            </div>
+                        </li>
+                        <li class="carousel-slide">
+                            <div class="before-after-wrapper">
+                                <img src="images/bazen-04-po.jpg" class="img-after" alt="Bazén Po realizaci" onerror="this.src='https://placehold.co/1200x800/0E2A36/FFFFFF?text=bazen-04-po.jpg'">
+                                <img src="images/bazen-04-pred.jpg" class="img-before" alt="Bazén Před realizací" onerror="this.src='https://placehold.co/1200x800/DCE7EC/0E2A36?text=bazen-04-pred.jpg'">
+                                <input type="range" min="0" max="100" value="50" class="slider-range">
+                                <div class="slider-handle"><i class="ph ph-arrows-left-right"></i></div>
+                                <div class="slider-labels"><span class="label-before">Před</span><span class="label-after">Po</span></div>
+                            </div>
+                        </li>
+                        <li class="carousel-slide">
+                            <div class="before-after-wrapper">
+                                <img src="images/bazen-05-po.jpg" class="img-after" alt="Bazén Po realizaci" onerror="this.src='https://placehold.co/1200x800/0E2A36/FFFFFF?text=bazen-05-po.jpg'">
+                                <img src="images/bazen-05-pred.jpg" class="img-before" alt="Bazén Před realizací" onerror="this.src='https://placehold.co/1200x800/DCE7EC/0E2A36?text=bazen-05-pred.jpg'">
+                                <input type="range" min="0" max="100" value="50" class="slider-range">
+                                <div class="slider-handle"><i class="ph ph-arrows-left-right"></i></div>
+                                <div class="slider-labels"><span class="label-before">Před</span><span class="label-after">Po</span></div>
+                            </div>
+                        </li>
+                        <li class="carousel-slide">
+                            <div class="before-after-wrapper">
+                                <img src="images/bazen-06-po.jpg" class="img-after" alt="Bazén Po realizaci" onerror="this.src='https://placehold.co/1200x800/0E2A36/FFFFFF?text=bazen-06-po.jpg'">
+                                <img src="images/bazen-06-pred.jpg" class="img-before" alt="Bazén Před realizací" onerror="this.src='https://placehold.co/1200x800/DCE7EC/0E2A36?text=bazen-06-pred.jpg'">
+                                <input type="range" min="0" max="100" value="50" class="slider-range">
+                                <div class="slider-handle"><i class="ph ph-arrows-left-right"></i></div>
+                                <div class="slider-labels"><span class="label-before">Před</span><span class="label-after">Po</span></div>
+                            </div>
+                        </li>
+                        <li class="carousel-slide">
+                            <div class="before-after-wrapper">
+                                <img src="images/bazen-07-po.jpg" class="img-after" alt="Bazén Po realizaci" onerror="this.src='https://placehold.co/1200x800/0E2A36/FFFFFF?text=bazen-07-po.jpg'">
+                                <img src="images/bazen-07-pred.jpg" class="img-before" alt="Bazén Před realizací" onerror="this.src='https://placehold.co/1200x800/DCE7EC/0E2A36?text=bazen-07-pred.jpg'">
+                                <input type="range" min="0" max="100" value="50" class="slider-range">
+                                <div class="slider-handle"><i class="ph ph-arrows-left-right"></i></div>
+                                <div class="slider-labels"><span class="label-before">Před</span><span class="label-after">Po</span></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Tečky (indikátory) -->
+                <div class="carousel-nav mt-4">
+                    <button class="carousel-indicator current-indicator"></button>
+                    <button class="carousel-indicator"></button>
+                    <button class="carousel-indicator"></button>
+                    <button class="carousel-indicator"></button>
+                    <button class="carousel-indicator"></button>
+                    <button class="carousel-indicator"></button>
+                    <button class="carousel-indicator"></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Část 2: Instalace technologií (CSS Grid + Lightbox) -->
+        <div class="container text-center" style="margin-top: 8rem;" data-aos="fade-up">
+            <h3 class="gradient-text" style="font-size: 2rem; margin-bottom: 3rem;">Nahlédněte pod pokličku: Instalace technologií</h3>
+            
+            <div class="tech-gallery-grid">
+                <!-- Položky 1-6 -->
+                <div class="gallery-item glass-card" data-index="0">
+                    <img src="images/technologie-01.jpg" alt="Instalace technologie 1" onerror="this.src='https://placehold.co/600x450/DCE7EC/0E2A36?text=technologie-01.jpg'">
+                    <div class="gallery-overlay"><i class="ph ph-magnifying-glass-plus"></i></div>
+                </div>
+                <div class="gallery-item glass-card" data-index="1">
+                    <img src="images/technologie-02.jpg" alt="Instalace technologie 2" onerror="this.src='https://placehold.co/600x450/DCE7EC/0E2A36?text=technologie-02.jpg'">
+                    <div class="gallery-overlay"><i class="ph ph-magnifying-glass-plus"></i></div>
+                </div>
+                <div class="gallery-item glass-card" data-index="2">
+                    <img src="images/technologie-03.jpg" alt="Instalace technologie 3" onerror="this.src='https://placehold.co/600x450/DCE7EC/0E2A36?text=technologie-03.jpg'">
+                    <div class="gallery-overlay"><i class="ph ph-magnifying-glass-plus"></i></div>
+                </div>
+                <div class="gallery-item glass-card" data-index="3">
+                    <img src="images/technologie-04.jpg" alt="Instalace technologie 4" onerror="this.src='https://placehold.co/600x450/DCE7EC/0E2A36?text=technologie-04.jpg'">
+                    <div class="gallery-overlay"><i class="ph ph-magnifying-glass-plus"></i></div>
+                </div>
+                <div class="gallery-item glass-card" data-index="4">
+                    <img src="images/technologie-05.jpg" alt="Instalace technologie 5" onerror="this.src='https://placehold.co/600x450/DCE7EC/0E2A36?text=technologie-05.jpg'">
+                    <div class="gallery-overlay"><i class="ph ph-magnifying-glass-plus"></i></div>
+                </div>
+                <div class="gallery-item glass-card" data-index="5">
+                    <img src="images/technologie-06.jpg" alt="Instalace technologie 6" onerror="this.src='https://placehold.co/600x450/DCE7EC/0E2A36?text=technologie-06.jpg'">
+                    <div class="gallery-overlay"><i class="ph ph-magnifying-glass-plus"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal pro Technologie -->
+    <div class="lightbox-modal" id="lightbox">
+        <button class="lightbox-close" id="lightbox-close"><i class="ph ph-x"></i></button>
+        <button class="lightbox-prev" id="lightbox-prev"><i class="ph ph-caret-left"></i></button>
+        <img src="" alt="Zvětšený náhled" class="lightbox-img" id="lightbox-img">
+        <button class="lightbox-next" id="lightbox-next"><i class="ph ph-caret-right"></i></button>
+    </div>

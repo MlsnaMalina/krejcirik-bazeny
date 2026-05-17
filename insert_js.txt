@@ -1,0 +1,133 @@
+﻿    // --- Portfolio: Before & After Slider Logika ---
+    const beforeAfterWrappers = document.querySelectorAll('.before-after-wrapper');
+    beforeAfterWrappers.forEach(wrapper => {
+        const slider = wrapper.querySelector('.slider-range');
+        const imgBefore = wrapper.querySelector('.img-before');
+        const handle = wrapper.querySelector('.slider-handle');
+
+        if (slider && imgBefore && handle) {
+            slider.addEventListener('input', (e) => {
+                const value = e.target.value;
+                imgBefore.style.clipPath = inset(0 % 0 0);
+                handle.style.left = ${value}%;
+            });
+        }
+    });
+
+    // --- Portfolio: Carousel Logika ---
+    const track = document.querySelector('.carousel-track');
+    if (track) {
+        const slides = Array.from(track.children);
+        const nextButton = document.querySelector('.next-btn');
+        const prevButton = document.querySelector('.prev-btn');
+        const dotsNav = document.querySelector('.carousel-nav');
+        const dots = Array.from(dotsNav.children);
+
+        let currentIndex = 0;
+
+        const updateCarousel = (index) => {
+            // Zjistíme šířku jednoho slidu (obvykle 100%)
+            const slideWidth = slides[0].getBoundingClientRect().width;
+            track.style.transform = 	ranslateX(-px);
+            
+            // Update aktivního slidu
+            slides.forEach(s => s.classList.remove('current-slide'));
+            slides[index].classList.add('current-slide');
+
+            // Update teček
+            dots.forEach(d => d.classList.remove('current-indicator'));
+            if(dots[index]) dots[index].classList.add('current-indicator');
+        };
+
+        if(nextButton && prevButton) {
+            nextButton.addEventListener('click', () => {
+                currentIndex = (currentIndex === slides.length - 1) ? 0 : currentIndex + 1;
+                updateCarousel(currentIndex);
+            });
+
+            prevButton.addEventListener('click', () => {
+                currentIndex = (currentIndex === 0) ? slides.length - 1 : currentIndex - 1;
+                updateCarousel(currentIndex);
+            });
+        }
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentIndex = index;
+                updateCarousel(currentIndex);
+            });
+        });
+
+        // Automatické přeškálování při změně velikosti okna
+        window.addEventListener('resize', () => {
+            updateCarousel(currentIndex);
+        });
+    }
+
+    // --- Portfolio: Lightbox Logika ---
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const lightbox = document.getElementById('lightbox');
+    
+    if (lightbox && galleryItems.length > 0) {
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lbClose = document.getElementById('lightbox-close');
+        const lbPrev = document.getElementById('lightbox-prev');
+        const lbNext = document.getElementById('lightbox-next');
+        let currentLbIndex = 0;
+
+        const showLightboxImage = (index) => {
+            const imgEl = galleryItems[index].querySelector('img');
+            lightboxImg.src = imgEl.src;
+            currentLbIndex = index;
+        };
+
+        galleryItems.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                showLightboxImage(index);
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden'; // Vypne scrollování stránky
+            });
+        });
+
+        const closeLightbox = () => {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        };
+
+        if (lbClose) lbClose.addEventListener('click', closeLightbox);
+        
+        lightbox.addEventListener('click', (e) => {
+            // Zavřít po kliknutí mimo obrázek a šipky
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        if (lbNext) {
+            lbNext.addEventListener('click', () => {
+                const nextIndex = (currentLbIndex === galleryItems.length - 1) ? 0 : currentLbIndex + 1;
+                showLightboxImage(nextIndex);
+            });
+        }
+
+        if (lbPrev) {
+            lbPrev.addEventListener('click', () => {
+                const prevIndex = (currentLbIndex === 0) ? galleryItems.length - 1 : currentLbIndex - 1;
+                showLightboxImage(prevIndex);
+            });
+        }
+        
+        // Klávesové zkratky pro lightbox
+        document.addEventListener('keydown', (e) => {
+            if (!lightbox.classList.contains('active')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowRight') {
+                const nextIndex = (currentLbIndex === galleryItems.length - 1) ? 0 : currentLbIndex + 1;
+                showLightboxImage(nextIndex);
+            }
+            if (e.key === 'ArrowLeft') {
+                const prevIndex = (currentLbIndex === 0) ? galleryItems.length - 1 : currentLbIndex - 1;
+                showLightboxImage(prevIndex);
+            }
+        });
+    }
