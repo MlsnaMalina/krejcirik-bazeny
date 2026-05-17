@@ -718,3 +718,31 @@ textarea.form-control {
   opacity: 1;
   transition: opacity 0.3s ease;
 }
+
+.footer-address {
+  margin-top: 1.25rem;
+  font-style: normal;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.7;
+}
+
+.footer-address .ph-map-pin {
+  margin-right: 0.4rem;
+  color: var(--color-logo-light);
+}
+
+.footer-map-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-top: 0.4rem;
+  color: var(--color-logo-light);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: opacity 0.2s ease;
+}
+
+.footer-map-link:hover {
+  opacity: 0.75;
+}
