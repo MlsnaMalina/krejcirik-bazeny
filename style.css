@@ -6,6 +6,8 @@
   --color-paper: #FFFFFF;
   --color-ink: #1A1A1A;
   --color-thread: #E6E0D2;
+  --color-logo-light: #74b7d7;
+  --color-logo-dark: #0d7bbb;
   
   
   --primary: var(--color-pool);
