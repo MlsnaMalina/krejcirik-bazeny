@@ -158,6 +158,21 @@ section { padding: 6rem 0; }
 .shape-fill { fill: var(--color-paper); stroke: none; }
 .shape-fill-footer { fill: var(--color-ink); stroke: none; }
 
+.wave-hero-bottom {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  line-height: 0;
+  z-index: 5;
+}
+
+.wave-hero-bottom svg {
+  display: block;
+  width: 100%;
+  height: 60px;
+}
+
 
 .negative-margin { margin-top: -6rem; }
 .glass-card {
