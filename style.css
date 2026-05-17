@@ -750,7 +750,6 @@ textarea.form-control {
 .footer-logo {
   display: inline-block;
   margin-bottom: 0.5rem;
-  filter: brightness(0) invert(1);
   opacity: 0.9;
   transition: opacity 0.2s ease;
 }
