@@ -843,3 +843,6 @@ textarea.form-control {
 .btn-white:hover {
   background: var(--color-fog);
 }
+.pool-cta-card .btn-white {
+  align-self: center;
+}
