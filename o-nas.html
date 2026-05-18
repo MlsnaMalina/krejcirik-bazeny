@@ -36,45 +36,76 @@
     </header>
 
     <main class="relative" style="overflow: hidden;">
+        <!-- Plovoucí statické bubliny -->
+        <div class="static-bubble" style="top: 5%; right: -5%; width: 400px; height: 400px; z-index: -1; opacity: 0.5;"></div>
+        <div class="static-bubble" style="top: 25%; left: -2%; width: 250px; height: 250px; z-index: -1; opacity: 0.6;"></div>
+        <div class="static-bubble" style="top: 45%; right: 5%; width: 300px; height: 300px; z-index: -1; opacity: 0.4;"></div>
+        <div class="static-bubble" style="top: 70%; left: 10%; width: 200px; height: 200px; z-index: -1; opacity: 0.5;"></div>
+        <div class="static-bubble" style="top: 85%; right: -2%; width: 350px; height: 350px; z-index: -1; opacity: 0.5;"></div>
 
         <!-- SEKCE 1: Hero -->
-        <section class="hero relative" style="padding: 12rem 0 8rem; background: var(--color-deep-water);">
-            <div class="container z-10" data-aos="fade-up" style="text-align: center;">
-                <span class="eyebrow" style="color: var(--color-fog);"><i class="ph ph-info"></i> O nás</span>
-                <h1 style="color: white; margin-top: 1rem;">Stavíme bazény od roku 2015.</h1>
-                <p style="color: rgba(255,255,255,0.85); font-size: 1.2rem; max-width: 720px; margin: 1rem auto 0;">Deset let zkušeností, stovky spokojených klientů a záruka 20 let na konstrukci.</p>
+        <section class="hero relative" id="domu" style="padding-top: 6rem; padding-bottom: 4rem;">
+            <svg class="hero-wave" viewBox="0 0 1440 320" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+                <path class="hero-wave-back" fill="var(--color-logo-dark)" opacity="0.12"
+                    d="M0,180 C240,220 480,140 720,170 C960,200 1200,250 1440,200 L1440,320 L0,320 Z">
+                    <animate attributeName="d" dur="11s" repeatCount="indefinite"
+                        values="M0,180 C240,220 480,140 720,170 C960,200 1200,250 1440,200 L1440,320 L0,320 Z;
+                                M0,190 C240,150 480,210 720,180 C960,150 1200,210 1440,190 L1440,320 L0,320 Z;
+                                M0,180 C240,220 480,140 720,170 C960,200 1200,250 1440,200 L1440,320 L0,320 Z" />
+                </path>
+                <path class="hero-wave-front" fill="var(--color-logo-light)" opacity="0.20"
+                    d="M0,220 C240,180 480,260 720,230 C960,200 1200,240 1440,210 L1440,320 L0,320 Z">
+                    <animate attributeName="d" dur="8s" repeatCount="indefinite"
+                        values="M0,220 C240,180 480,260 720,230 C960,200 1200,240 1440,210 L1440,320 L0,320 Z;
+                                M0,210 C240,250 480,200 720,225 C960,250 1200,205 1440,230 L1440,320 L0,320 Z;
+                                M0,220 C240,180 480,260 720,230 C960,200 1200,240 1440,210 L1440,320 L0,320 Z" />
+                </path>
+            </svg>
+            <div class="container">
+                <div class="hero-content z-10" data-aos="fade-right">
+                    <span class="eyebrow"><i class="ph ph-info"></i> O firmě</span>
+                    <h1 class="gradient-text">Stavíme bazény od roku 2015.</h1>
+                    <p>Deset let zkušeností a záruka 20 let na každou konstrukci.</p>
+                    <div class="hero-actions mt-4">
+                        <a href="#kontakt-cta" class="btn btn-primary">Nezávazně poptat bazén</a>
+                    </div>
+                </div>
             </div>
             <div class="wave-divider wave-hero-bottom">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 80" preserveAspectRatio="none">
-                <path d="M0,40 C150,80 350,0 600,40 C850,80 1050,0 1200,40 L1200,80 L0,80 Z" fill="white"/>
-              </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 80" preserveAspectRatio="none">
+                    <path d="M0,40 C150,80 350,0 600,40 C850,80 1050,0 1200,40 L1200,80 L0,80 Z" fill="white"/>
+                </svg>
             </div>
         </section>
 
-        <!-- SEKCE 2: Kdo jsme -->
+        <!-- SEKCE 2: Statistiky -->
         <section class="relative" style="background: white;">
-            <div class="container grid-2 align-center" style="gap: 4rem;">
-                <div data-aos="fade-right">
-                    <div class="card-number-heading">01 / Kdo jsme</div>
-                    <h2>Rodinná firma se zkušenostmi z desítek projektů.</h2>
-                    <p>Jsme rodinná firma se specializací na výstavbu zapuštěných venkovních bazénů. Začínali jsme v roce 2015 a za tu dobu jsme realizovali desítky projektů — od jednoduchých zahradních bazénů po prémiové mozaikové instalace na míru.</p>
-                    <p>Každý bazén stavíme z polystyrenových tvárnic nebo ze ztraceného bednění, které společně s bazénovým schodištěm vyléváme betonem. Na takto postavenou konstrukci poskytujeme záruku 20 let. Nejde o marketingový příslib — jde o standard, za který ručíme.</p>
-                    <p>Přizpůsobíme se vašim požadavkům: od velikosti a hloubky bazénu přes typ vstupu do vody až po estetické doladění okolí. Bazén realizujeme jako kompletní řešení na klíč, nebo jen jako přípravu pro zapuštění bazénové vany — záleží na vás.</p>
+            <div class="container">
+                <div style="text-align: center; max-width: 720px; margin: 0 auto 3rem;" data-aos="fade-up">
+                    <h2>Proč Krejčiřík Bazény?</h2>
                 </div>
-                <div data-aos="fade-left">
-                    <div class="card glass-card" style="margin-bottom: 1.5rem;">
-                        <div class="card-number-heading" style="font-size: 3rem; line-height: 1.1; color: var(--color-deep-water);">2015</div>
-                        <p style="margin-bottom: 0;">Rok založení</p>
+                <div class="grid-3">
+                    <div class="card glass-card" data-aos="fade-up" data-aos-delay="100">
+                        <p class="card-number-heading">2015</p>
+                        <h3>Rok založení</h3>
+                        <p>Přes deset let stavíme bazény, které slouží a vydrží.</p>
                     </div>
-                    <div class="card glass-card" style="margin-bottom: 1.5rem;">
-                        <div class="card-number-heading" style="font-size: 3rem; line-height: 1.1; color: var(--color-deep-water);">20 let</div>
-                        <p style="margin-bottom: 0;">Záruka na konstrukci</p>
+                    <div class="card glass-card" data-aos="fade-up" data-aos-delay="200">
+                        <p class="card-number-heading">20 let</p>
+                        <h3>Záruka na konstrukci</h3>
+                        <p>Na každou postavenou konstrukci poskytujeme záruku 20 let. Bez výjimek.</p>
                     </div>
-                    <div class="card glass-card">
-                        <div class="card-number-heading" style="font-size: 3rem; line-height: 1.1; color: var(--color-deep-water);">3</div>
-                        <p style="margin-bottom: 0;">Typy bazénů na míru</p>
+                    <div class="card glass-card" data-aos="fade-up" data-aos-delay="300">
+                        <p class="card-number-heading">3</p>
+                        <h3>Typy bazénů na míru</h3>
+                        <p>Laminát, těžká fólie nebo mozaika — přizpůsobíme se vašemu pozemku i rozpočtu.</p>
                     </div>
                 </div>
+            </div>
+            <div class="wave-divider">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 80" preserveAspectRatio="none">
+                    <path d="M0,40 C300,80 900,0 1200,40 L1200,80 L0,80 Z" fill="var(--color-fog)"/>
+                </svg>
             </div>
         </section>
 
@@ -82,40 +113,56 @@
         <section class="relative" style="background: var(--color-fog);">
             <div class="container">
                 <div style="text-align: center; max-width: 720px; margin: 0 auto 3rem;" data-aos="fade-up">
-                    <div class="card-number-heading">02 / Co nás odlišuje</div>
-                    <h2>Proč Krejčiřík Bazény?</h2>
+                    <h2>Co nás odlišuje</h2>
                 </div>
                 <div class="grid-3">
                     <div class="card glass-card" data-aos="fade-up" data-aos-delay="100">
                         <div style="font-size: 2.5rem; color: var(--color-pool); margin-bottom: 1rem;"><i class="ph-fill ph-shield-check"></i></div>
                         <h3>Záruka 20 let</h3>
-                        <p>Na konstrukci bazénu poskytujeme záruku 20 let. Stavíme tak, aby bazén sloužil generacím, ne jen jedné sezóně.</p>
+                        <p>Stavíme z polystyrenových tvárnic nebo ztraceného bednění litého betonem. Na konstrukci ručíme 20 lety záruky.</p>
                     </div>
                     <div class="card glass-card" data-aos="fade-up" data-aos-delay="200">
                         <div style="font-size: 2.5rem; color: var(--color-pool); margin-bottom: 1rem;"><i class="ph-fill ph-wrench"></i></div>
                         <h3>Servis po celý rok</h3>
-                        <p>Nezmizíme po předání klíčů. Staráme se o váš bazén při odzimování, zazimování i kdykoliv v průběhu sezóny.</p>
+                        <p>Nezmizíme po předání. Staráme se o váš bazén při odzimování, zazimování i v průběhu celé sezóny.</p>
                     </div>
                     <div class="card glass-card" data-aos="fade-up" data-aos-delay="300">
                         <div style="font-size: 2.5rem; color: var(--color-pool); margin-bottom: 1rem;"><i class="ph-fill ph-sliders"></i></div>
                         <h3>Řešení na míru</h3>
-                        <p>Každý projekt je jiný. Přizpůsobíme velikost, hloubku, typ vstupu i fólii vašim představám a podmínkám pozemku.</p>
+                        <p>Přizpůsobíme velikost, hloubku, typ vstupu i barvu fólie. Realizujeme na klíč nebo jen přípravu pro vanu — záleží na vás.</p>
                     </div>
+                </div>
+            </div>
+            <div class="wave-divider">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 80" preserveAspectRatio="none">
+                    <path d="M0,40 C300,0 900,80 1200,40 L1200,80 L0,80 Z" fill="white"/>
+                </svg>
+            </div>
+        </section>
+
+        <!-- SEKCE 4: Jak pracujeme -->
+        <section class="relative" style="background: white;">
+            <div class="container" style="max-width: 800px; margin: 0 auto;">
+                <div data-aos="fade-up">
+                    <h2 style="text-align: center; margin-bottom: 2rem;">Jak pracujeme</h2>
+                    <p>Každý bazén stavíme jako zapuštěný venkovní bazén na míru. Konstrukčně používáme polystyrenové tvárnice nebo ztracené bednění — obojí vyléváme betonem společně s bazénovým schodištěm, které je součástí struktury.</p>
+                    <p>Poslední vrstvou je měkká PVC fólie, kterou dodáváme v různých barevných odstínech. Výběr je na klientovi — přizpůsobíme se jeho představám o estetice i okolí bazénu.</p>
+                    <p>Bazén realizujeme jako kompletní řešení na klíč, nebo jen jako přípravu pro zapuštění bazénové vany. Přizpůsobíme se vašim požadavkům — od velikosti a hloubky po typ vstupu do vody.</p>
                 </div>
             </div>
         </section>
 
-        <!-- SEKCE 4: CTA -->
+        <!-- SEKCE 5: CTA -->
         <section class="cta-section relative" id="kontakt-cta">
             <div class="wave-divider wave-top">
                 <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C821.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,115.54,192.5,99.5,236.4,88.16,280.45,64.04,321.39,56.44Z" class="shape-fill"></path>
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,115.54,192.5,99.5,236.4,88.16,280.45,64.04,321.39,56.44Z" class="shape-fill"></path>
                 </svg>
             </div>
 
             <div class="container relative z-10 text-center" data-aos="zoom-in" style="padding-top: 2rem; padding-bottom: 2rem;">
-                <h2 style="color: white; margin-bottom: 1rem;">Chcete vědět víc?</h2>
-                <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; max-width: 640px; margin: 0 auto 2rem;">Rádi zodpovíme vaše otázky a nezávazně probereme váš projekt.</p>
+                <h2 style="color: white; margin-bottom: 1rem;">Chcete probrat váš projekt?</h2>
+                <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; max-width: 640px; margin: 0 auto 2rem;">Nezávazně se ozvěte — rádi zodpovíme vaše otázky a navrhneme řešení pro váš pozemek.</p>
                 <a href="index.html#kontakt-cta" class="btn btn-light">Nezávazně poptat bazén</a>
             </div>
 
