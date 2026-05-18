@@ -234,29 +234,32 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Pool type tabs (bazeny.html)
-document.querySelectorAll('.pool-tab-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.pool-tab-btn').forEach(b => b.classList.remove('active'));
-    document.querySelectorAll('.pool-tab-content').forEach(c => c.classList.remove('active'));
-    btn.classList.add('active');
-    document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+// Pool type accordion (bazeny.html)
+document.querySelectorAll('.pool-accordion-header').forEach(header => {
+  header.addEventListener('click', () => {
+    const item = header.closest('.pool-accordion-item');
+    const isActive = item.classList.contains('active');
+    document.querySelectorAll('.pool-accordion-item').forEach(i => i.classList.remove('active'));
+    if (!isActive) item.classList.add('active');
   });
 });
 
-function activateTabFromHash() {
+function activateAccordionFromHash() {
   const hash = window.location.hash;
-  const map = { '#detail-laminat': 'laminat', '#detail-folie': 'folie', '#detail-mozaika': 'mozaika' };
-  const tab = map[hash];
-  if (tab) {
-    document.querySelectorAll('.pool-tab-btn').forEach(b => b.classList.remove('active'));
-    document.querySelectorAll('.pool-tab-content').forEach(c => c.classList.remove('active'));
-    const btn = document.querySelector(`.pool-tab-btn[data-tab="${tab}"]`);
-    if (btn) btn.classList.add('active');
-    const content = document.getElementById('tab-' + tab);
-    if (content) content.classList.add('active');
-    document.getElementById('pool-details')?.scrollIntoView({ behavior: 'smooth' });
+  const map = {
+    '#detail-laminat': 'detail-laminat',
+    '#detail-folie': 'detail-folie',
+    '#detail-mozaika': 'detail-mozaika'
+  };
+  const targetId = map[hash];
+  if (targetId) {
+    document.querySelectorAll('.pool-accordion-item').forEach(i => i.classList.remove('active'));
+    const target = document.getElementById(targetId);
+    if (target) {
+      target.classList.add('active');
+      setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
+    }
   }
 }
-window.addEventListener('hashchange', activateTabFromHash);
-window.addEventListener('DOMContentLoaded', activateTabFromHash);
+window.addEventListener('hashchange', activateAccordionFromHash);
+window.addEventListener('DOMContentLoaded', activateAccordionFromHash);

@@ -847,45 +847,68 @@ textarea.form-control {
   align-self: center;
 }
 
-.pool-tabs-section {
+.pool-accordion-section {
   padding: var(--section-padding, 4rem 0);
 }
-.pool-tabs-nav {
-  display: flex;
-  gap: 0.75rem;
-  margin-bottom: 2.5rem;
-  flex-wrap: wrap;
+.pool-accordion-item {
+  border: 1px solid rgba(13, 123, 187, 0.2);
+  border-radius: var(--radius-lg);
+  margin-bottom: 1rem;
+  overflow: hidden;
+  background: white;
+  transition: box-shadow 0.2s ease;
 }
-.pool-tab-btn {
+.pool-accordion-item.active {
+  box-shadow: 0 4px 24px rgba(13, 123, 187, 0.12);
+  border-color: var(--color-pool);
+}
+.pool-accordion-header {
+  width: 100%;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1.5rem;
-  border: 2px solid var(--color-pool);
-  border-radius: var(--radius-lg);
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
   background: transparent;
-  color: var(--color-pool);
-  font-family: 'Manrope', sans-serif;
-  font-weight: 600;
-  font-size: 0.95rem;
+  border: none;
   cursor: pointer;
-  transition: all 0.2s ease;
+  text-align: left;
+  gap: 1rem;
 }
-.pool-tab-btn:hover {
+.pool-accordion-header:hover {
   background: var(--color-fog);
 }
-.pool-tab-btn.active {
-  background: var(--color-deep-water);
-  border-color: var(--color-deep-water);
-  color: white;
+.pool-accordion-item.active .pool-accordion-header {
+  background: var(--color-fog);
 }
-.pool-tab-btn.active i,
-.pool-tab-btn i {
-  font-size: 1.1rem;
+.pool-accordion-header-left {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
 }
-.pool-tab-content {
+.pool-accordion-header-left h3 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.2rem;
+  color: var(--color-deep-water);
+}
+.pool-accordion-claim {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--color-pool);
+  opacity: 0.85;
+}
+.pool-accordion-icon {
+  font-size: 1.25rem;
+  color: var(--color-pool);
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+.pool-accordion-item.active .pool-accordion-icon {
+  transform: rotate(180deg);
+}
+.pool-accordion-body {
   display: none;
+  padding: 0 2rem 2rem 2rem;
 }
-.pool-tab-content.active {
+.pool-accordion-item.active .pool-accordion-body {
   display: block;
 }
