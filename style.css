@@ -807,3 +807,39 @@ textarea.form-control {
   color: var(--color-logo-light);
   opacity: 0.7;
 }
+
+.pool-cta-card {
+  background: linear-gradient(135deg, var(--color-deep-water), var(--color-pool)) !important;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+.pool-cta-card i {
+  font-size: 2.5rem;
+  color: var(--color-logo-light);
+}
+.pool-cta-card h3 {
+  color: white;
+  font-size: 1.4rem;
+  line-height: 1.3;
+}
+.pool-cta-card p {
+  color: rgba(255,255,255,0.75);
+  font-size: 0.95rem;
+}
+.btn-white {
+  display: inline-block;
+  margin-top: auto;
+  padding: 0.75rem 1.5rem;
+  background: white;
+  color: var(--color-deep-water);
+  border-radius: var(--radius-lg);
+  font-weight: 700;
+  text-decoration: none;
+  width: fit-content;
+}
+.btn-white:hover {
+  background: var(--color-fog);
+}
