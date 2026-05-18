@@ -138,23 +138,25 @@
             </div>
         </section>
 
-        <!-- Sekce s bazény (Akordeon) -->
-        <section id="pool-details" class="pool-accordion-section relative" style="padding-bottom: 8rem; padding-top: 0;">
+        <!-- Sekce s bazény (Alternující bloky) -->
+        <section id="pool-details" class="pool-alternating-section relative" style="padding-bottom: 8rem; padding-top: 0;">
             <span id="prehled" style="position: absolute; top: -100px;"></span>
             <div class="container">
 
-                <div class="pool-accordion-item active" id="detail-laminat">
-                    <button class="pool-accordion-header">
-                        <div class="pool-accordion-header-left">
-                            <span class="card-number-heading">01 /</span>
-                            <div>
-                                <h3>Laminátové bazény</h3>
-                                <p class="pool-accordion-claim">Rychlé a praktické řešení s hotovou skořepinou.</p>
-                            </div>
+                <div class="pool-alt-block" id="detail-laminat">
+                    <div class="pool-alt-photo">
+                        <img src="images/bazen-laminat.jpg" alt="Laminátový bazén" onerror="this.parentElement.classList.add('pool-alt-photo--placeholder')">
+                    </div>
+                    <div class="pool-alt-content">
+                        <span class="card-number-heading">01 /</span>
+                        <h3>Laminátové bazény</h3>
+                        <p class="pool-alt-claim">Rychlé a praktické řešení s hotovou skořepinou.</p>
+                        <div class="pool-alt-tags">
+                            <span class="pool-alt-tag">rychlá instalace</span>
+                            <span class="pool-alt-tag">tepelná izolace</span>
+                            <span class="pool-alt-tag">hladký povrch</span>
                         </div>
-                        <i class="ph-fill ph-caret-down pool-accordion-icon"></i>
-                    </button>
-                    <div class="pool-accordion-body">
+                        <div class="pool-alt-body">
 
                 <!-- Laminátové bazény -->
                 <div id="laminat" class="glass-card" data-aos="fade-up" style="padding: 4rem;">
@@ -189,21 +191,24 @@
                     </div>
                 </div>
 
+                        </div>
                     </div>
                 </div>
 
-                <div class="pool-accordion-item" id="detail-folie">
-                    <button class="pool-accordion-header">
-                        <div class="pool-accordion-header-left">
-                            <span class="card-number-heading">02 /</span>
-                            <div>
-                                <h3>Bazény z těžké fólie</h3>
-                                <p class="pool-accordion-claim">Variabilní řešení s možností přizpůsobit tvar i rozměry.</p>
-                            </div>
+                <div class="pool-alt-block pool-alt-block--reverse" id="detail-folie">
+                    <div class="pool-alt-photo">
+                        <img src="images/bazen-folie.jpg" alt="Bazén z těžké fólie" onerror="this.parentElement.classList.add('pool-alt-photo--placeholder')">
+                    </div>
+                    <div class="pool-alt-content">
+                        <span class="card-number-heading">02 /</span>
+                        <h3>Bazény z těžké fólie</h3>
+                        <p class="pool-alt-claim">Variabilní řešení s možností přizpůsobit tvar i rozměry.</p>
+                        <div class="pool-alt-tags">
+                            <span class="pool-alt-tag">libovolný tvar</span>
+                            <span class="pool-alt-tag">rekonstrukce</span>
+                            <span class="pool-alt-tag">odolná fólie</span>
                         </div>
-                        <i class="ph-fill ph-caret-down pool-accordion-icon"></i>
-                    </button>
-                    <div class="pool-accordion-body">
+                        <div class="pool-alt-body">
 
                 <!-- Bazény z těžké fólie -->
                 <div id="folie" class="glass-card" data-aos="fade-up" style="padding: 4rem;">
@@ -238,21 +243,24 @@
                     </div>
                 </div>
 
+                        </div>
                     </div>
                 </div>
 
-                <div class="pool-accordion-item" id="detail-mozaika">
-                    <button class="pool-accordion-header">
-                        <div class="pool-accordion-header-left">
-                            <span class="card-number-heading">03 /</span>
-                            <div>
-                                <h3>Mozaikové bazény</h3>
-                                <p class="pool-accordion-claim">Reprezentativní řešení s neomezenými možnostmi designu.</p>
-                            </div>
+                <div class="pool-alt-block" id="detail-mozaika">
+                    <div class="pool-alt-photo">
+                        <img src="images/bazen-mozaika.jpg" alt="Mozaikový bazén" onerror="this.parentElement.classList.add('pool-alt-photo--placeholder')">
+                    </div>
+                    <div class="pool-alt-content">
+                        <span class="card-number-heading">03 /</span>
+                        <h3>Mozaikové bazény</h3>
+                        <p class="pool-alt-claim">Reprezentativní řešení s neomezenými možnostmi designu.</p>
+                        <div class="pool-alt-tags">
+                            <span class="pool-alt-tag">originální design</span>
+                            <span class="pool-alt-tag">UV odolnost</span>
+                            <span class="pool-alt-tag">luxusní provedení</span>
                         </div>
-                        <i class="ph-fill ph-caret-down pool-accordion-icon"></i>
-                    </button>
-                    <div class="pool-accordion-body">
+                        <div class="pool-alt-body">
 
                 <!-- Mozaikové bazény -->
                 <div id="mozaika" class="glass-card" data-aos="fade-up" style="padding: 4rem;">
@@ -287,6 +295,7 @@
                     </div>
                 </div>
 
+                        </div>
                     </div>
                 </div>
 

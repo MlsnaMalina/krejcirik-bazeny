@@ -847,68 +847,90 @@ textarea.form-control {
   align-self: center;
 }
 
-.pool-accordion-section {
+.pool-alternating-section {
   padding: var(--section-padding, 4rem 0);
 }
-.pool-accordion-item {
-  border: 1px solid rgba(13, 123, 187, 0.2);
+.pool-alt-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+  margin-bottom: 4rem;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid rgba(13, 123, 187, 0.12);
+}
+.pool-alt-block:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+.pool-alt-block--reverse {
+  flex-direction: row-reverse;
+}
+.pool-alt-photo {
+  width: 45%;
+  flex-shrink: 0;
   border-radius: var(--radius-lg);
-  margin-bottom: 1rem;
   overflow: hidden;
-  background: white;
-  transition: box-shadow 0.2s ease;
+  min-height: 300px;
+  background: var(--color-fog);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.pool-accordion-item.active {
-  box-shadow: 0 4px 24px rgba(13, 123, 187, 0.12);
-  border-color: var(--color-pool);
-}
-.pool-accordion-header {
+.pool-alt-photo img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  min-height: 300px;
+}
+.pool-alt-photo--placeholder::after {
+  content: 'Foto bude doplněno';
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.8rem;
+  color: var(--color-pool);
+  opacity: 0.6;
+}
+.pool-alt-content {
+  flex: 1;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1.5rem 2rem;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  text-align: left;
-  gap: 1rem;
+  flex-direction: column;
+  gap: 0.75rem;
 }
-.pool-accordion-header:hover {
-  background: var(--color-fog);
-}
-.pool-accordion-item.active .pool-accordion-header {
-  background: var(--color-fog);
-}
-.pool-accordion-header-left {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
-.pool-accordion-header-left h3 {
-  margin: 0 0 0.25rem 0;
-  font-size: 1.2rem;
+.pool-alt-content h3 {
+  margin: 0;
+  font-size: 1.6rem;
   color: var(--color-deep-water);
 }
-.pool-accordion-claim {
+.pool-alt-claim {
+  font-size: 1rem;
+  color: var(--color-pool);
+  font-weight: 600;
   margin: 0;
-  font-size: 0.9rem;
+}
+.pool-alt-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.pool-alt-tag {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.75rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+  background: var(--color-fog);
   color: var(--color-pool);
-  opacity: 0.85;
+  border: 1px solid rgba(13, 123, 187, 0.2);
 }
-.pool-accordion-icon {
-  font-size: 1.25rem;
-  color: var(--color-pool);
-  flex-shrink: 0;
-  transition: transform 0.25s ease;
+.pool-alt-body {
+  margin-top: 0.5rem;
 }
-.pool-accordion-item.active .pool-accordion-icon {
-  transform: rotate(180deg);
-}
-.pool-accordion-body {
-  display: none;
-  padding: 0 2rem 2rem 2rem;
-}
-.pool-accordion-item.active .pool-accordion-body {
-  display: block;
+@media (max-width: 768px) {
+  .pool-alt-block,
+  .pool-alt-block--reverse {
+    flex-direction: column;
+  }
+  .pool-alt-photo {
+    width: 100%;
+  }
 }

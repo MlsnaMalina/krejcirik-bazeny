@@ -234,32 +234,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Pool type accordion (bazeny.html)
-document.querySelectorAll('.pool-accordion-header').forEach(header => {
-  header.addEventListener('click', () => {
-    const item = header.closest('.pool-accordion-item');
-    const isActive = item.classList.contains('active');
-    document.querySelectorAll('.pool-accordion-item').forEach(i => i.classList.remove('active'));
-    if (!isActive) item.classList.add('active');
-  });
-});
-
-function activateAccordionFromHash() {
+// Pool detail anchor scroll (bazeny.html)
+function activatePoolFromHash() {
   const hash = window.location.hash;
-  const map = {
-    '#detail-laminat': 'detail-laminat',
-    '#detail-folie': 'detail-folie',
-    '#detail-mozaika': 'detail-mozaika'
-  };
-  const targetId = map[hash];
-  if (targetId) {
-    document.querySelectorAll('.pool-accordion-item').forEach(i => i.classList.remove('active'));
-    const target = document.getElementById(targetId);
-    if (target) {
-      target.classList.add('active');
-      setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
-    }
+  const allowed = ['#detail-laminat', '#detail-folie', '#detail-mozaika'];
+  if (allowed.includes(hash)) {
+    const target = document.querySelector(hash);
+    if (target) setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
   }
 }
-window.addEventListener('hashchange', activateAccordionFromHash);
-window.addEventListener('DOMContentLoaded', activateAccordionFromHash);
+window.addEventListener('hashchange', activatePoolFromHash);
+window.addEventListener('DOMContentLoaded', activatePoolFromHash);
