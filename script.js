@@ -233,3 +233,30 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// Pool type tabs (bazeny.html)
+document.querySelectorAll('.pool-tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.pool-tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.pool-tab-content').forEach(c => c.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+  });
+});
+
+function activateTabFromHash() {
+  const hash = window.location.hash;
+  const map = { '#detail-laminat': 'laminat', '#detail-folie': 'folie', '#detail-mozaika': 'mozaika' };
+  const tab = map[hash];
+  if (tab) {
+    document.querySelectorAll('.pool-tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.pool-tab-content').forEach(c => c.classList.remove('active'));
+    const btn = document.querySelector(`.pool-tab-btn[data-tab="${tab}"]`);
+    if (btn) btn.classList.add('active');
+    const content = document.getElementById('tab-' + tab);
+    if (content) content.classList.add('active');
+    document.getElementById('pool-details')?.scrollIntoView({ behavior: 'smooth' });
+  }
+}
+window.addEventListener('hashchange', activateTabFromHash);
+window.addEventListener('DOMContentLoaded', activateTabFromHash);

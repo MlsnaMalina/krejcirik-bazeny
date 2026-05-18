@@ -846,3 +846,46 @@ textarea.form-control {
 .pool-cta-card .btn-white {
   align-self: center;
 }
+
+.pool-tabs-section {
+  padding: var(--section-padding, 4rem 0);
+}
+.pool-tabs-nav {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+.pool-tab-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--color-pool);
+  border-radius: var(--radius-lg);
+  background: transparent;
+  color: var(--color-pool);
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.pool-tab-btn:hover {
+  background: var(--color-fog);
+}
+.pool-tab-btn.active {
+  background: var(--color-deep-water);
+  border-color: var(--color-deep-water);
+  color: white;
+}
+.pool-tab-btn.active i,
+.pool-tab-btn i {
+  font-size: 1.1rem;
+}
+.pool-tab-content {
+  display: none;
+}
+.pool-tab-content.active {
+  display: block;
+}

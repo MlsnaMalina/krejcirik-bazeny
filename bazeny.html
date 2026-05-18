@@ -118,17 +118,17 @@
                     <div class="glass-card" style="text-align: center; display: flex; flex-direction: column;">
                         <h3 style="color: var(--color-pool); margin-bottom: 1rem;">Laminátové bazény</h3>
                         <p style="font-size: 0.95rem; margin: 0 auto 2rem; flex-grow: 1;">Rychlé a praktické řešení s hotovou skořepinou. Vhodné pro ty, kdo chtějí rychlou instalaci, čistý vzhled a tepelně izolovaný bazén.</p>
-                        <a href="#laminat" class="btn btn-outline" style="align-self: center;">Více informací</a>
+                        <a href="#detail-laminat" class="btn btn-outline" style="align-self: center;">Zobrazit detail →</a>
                     </div>
                     <div class="glass-card" style="text-align: center; display: flex; flex-direction: column;">
                         <h3 style="color: var(--color-pool); margin-bottom: 1rem;">Bazény z těžké fólie</h3>
                         <p style="font-size: 0.95rem; margin: 0 auto 2rem; flex-grow: 1;">Variabilní řešení s možností přizpůsobit tvar i rozměry. Hodí se tam, kde je důležitá flexibilita návrhu nebo rekonstrukce staršího bazénu.</p>
-                        <a href="#folie" class="btn btn-outline" style="align-self: center;">Více informací</a>
+                        <a href="#detail-folie" class="btn btn-outline" style="align-self: center;">Zobrazit detail →</a>
                     </div>
                     <div class="glass-card" style="text-align: center; display: flex; flex-direction: column;">
                         <h3 style="color: var(--color-pool); margin-bottom: 1rem;">Mozaikové bazény</h3>
                         <p style="font-size: 0.95rem; margin: 0 auto 2rem; flex-grow: 1;">Reprezentativní a designové řešení s vysokou mírou individuality. Pro projekty, kde je důležitý vzhled, detail a originální provedení.</p>
-                        <a href="#mozaika" class="btn btn-outline" style="align-self: center;">Více informací</a>
+                        <a href="#detail-mozaika" class="btn btn-outline" style="align-self: center;">Zobrazit detail →</a>
                     </div>
                 </div>
                 <div style="text-align: center; margin-top: 3rem;">
@@ -138,9 +138,27 @@
             </div>
         </section>
 
-        <!-- Sekce s bazény (Karty) -->
-        <section id="prehled" class="relative" style="padding-bottom: 8rem; padding-top: 0;">
-            <div class="container" style="display: flex; flex-direction: column; gap: 5rem;">
+        <!-- Sekce s bazény (Taby) -->
+        <section id="pool-details" class="pool-tabs-section relative" style="padding-bottom: 8rem; padding-top: 0;">
+            <span id="prehled" style="position: absolute; top: -100px;"></span>
+            <div class="container">
+                <div class="pool-tabs-nav">
+                    <button class="pool-tab-btn active" data-tab="laminat" id="detail-laminat-btn">
+                        <i class="ph-fill ph-waves"></i>
+                        Laminátové bazény
+                    </button>
+                    <button class="pool-tab-btn" data-tab="folie" id="detail-folie-btn">
+                        <i class="ph-fill ph-paint-roller"></i>
+                        Bazény z těžké fólie
+                    </button>
+                    <button class="pool-tab-btn" data-tab="mozaika" id="detail-mozaika-btn">
+                        <i class="ph-fill ph-diamonds-four"></i>
+                        Mozaikové bazény
+                    </button>
+                </div>
+
+                <div class="pool-tab-content active" id="tab-laminat">
+                    <span id="detail-laminat"></span>
 
                 <!-- Laminátové bazény -->
                 <div id="laminat" class="glass-card" data-aos="fade-up" style="padding: 4rem;">
@@ -175,6 +193,11 @@
                     </div>
                 </div>
 
+                </div>
+
+                <div class="pool-tab-content" id="tab-folie">
+                    <span id="detail-folie"></span>
+
                 <!-- Bazény z těžké fólie -->
                 <div id="folie" class="glass-card" data-aos="fade-up" style="padding: 4rem;">
                     <h2 style="color: var(--color-deep-water); font-size: 2.5rem; margin-bottom: 3rem; text-align: center;">Bazény z těžké fólie</h2>
@@ -208,6 +231,11 @@
                     </div>
                 </div>
 
+                </div>
+
+                <div class="pool-tab-content" id="tab-mozaika">
+                    <span id="detail-mozaika"></span>
+
                 <!-- Mozaikové bazény -->
                 <div id="mozaika" class="glass-card" data-aos="fade-up" style="padding: 4rem;">
                     <h2 style="color: var(--color-deep-water); font-size: 2.5rem; margin-bottom: 3rem; text-align: center;">Mozaikové bazény</h2>
@@ -239,6 +267,8 @@
                         <h3 style="color: var(--color-pool); margin-bottom: 1rem;">Co je potřeba při realizaci</h3>
                         <p style="margin-bottom: 0; max-width: none;">Instalace vyžaduje precizní přípravu podkladu a hydroizolace. Mozaika se lepí speciálním flexibilním lepidlem na betonovou konstrukci a následně se pečlivě vyspáruje podle navrženého vzoru.</p>
                     </div>
+                </div>
+
                 </div>
 
             </div>
