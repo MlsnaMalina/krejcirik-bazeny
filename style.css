@@ -879,7 +879,7 @@ textarea.form-control {
   align-self: flex-start;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  min-height: auto;
+  min-height: 0;
   background: var(--color-fog);
   display: flex;
   align-items: center;
