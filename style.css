@@ -863,7 +863,7 @@ textarea.form-control {
 }
 .pool-alt-top {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 3rem;
   margin-bottom: 2rem;
 }
@@ -876,7 +876,7 @@ textarea.form-control {
 .pool-alt-photo {
   width: 45%;
   flex-shrink: 0;
-  align-self: flex-start;
+  align-self: center;
   border-radius: var(--radius-lg);
   overflow: hidden;
   min-height: 0;
