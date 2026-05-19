@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servis a péče | Krejčiřík Bazény</title>
+    <meta name="description" content="Odzimování, zazimování a servis bazénových technologií. Staráme se o váš bazén po celý rok.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- AOS Animation Library CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .benefits-box-dark {
+            background: var(--color-deep-water);
+            color: white;
+            border: none;
+            padding: 2.5rem;
+            border-radius: var(--radius-lg);
+        }
+        .benefits-box-dark h3 {
+            color: white !important;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+        .benefits-box-dark ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .benefits-box-dark ul li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            color: rgba(255,255,255,0.9);
+            font-size: 1.05rem;
+        }
+        .benefits-box-dark ul li i {
+            color: white;
+            font-size: 1.25rem;
+            margin-top: 0.1rem;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hlavička a navigace -->
+    <header class="header glassmorphism" id="header">
+        <div class="container header-inner">
+            <a href="index.html#domu" class="logo" style="display: flex; align-items: center;"><img src="images/logo.png" alt="Krejčiřík Bazény" style="height: 80px; width: auto; display: block;"></a>
+            <nav class="nav">
+                <a href="index.html#domu">Domů</a>
+                <a href="index.html#sluzby" class="scroll-tab" data-target="tab-bazeny">Bazény</a>
+                <a href="servis.html" class="active">Servis a péče</a>
+                <a href="unik-vody.html">Únik vody</a>
+                <a href="index.html#cista-voda">Čistá voda</a>
+                <a href="index.html#realizace">Ukázka naší práce</a>
+                <a href="o-nas.html">O nás</a>
+                <a href="#kontakt-cta">Kontakt</a>
+            </nav>
+            <a href="#kontakt-cta" class="btn btn-primary">Pojďme probrat...</a>
+        </div>
+    </header>
+
+    <main class="relative" style="overflow: hidden;">
+        <!-- Plovoucí statické bubliny pro pocit přelévání na celé stránce -->
+        <div class="static-bubble" style="top: 5%; right: -5%; width: 400px; height: 400px; z-index: -1; opacity: 0.5;"></div>
+        <div class="static-bubble" style="top: 25%; left: -2%; width: 250px; height: 250px; z-index: -1; opacity: 0.6;"></div>
+        <div class="static-bubble" style="top: 45%; right: 5%; width: 300px; height: 300px; z-index: -1; opacity: 0.4;"></div>
+        <div class="static-bubble" style="top: 70%; left: 10%; width: 200px; height: 200px; z-index: -1; opacity: 0.5;"></div>
+        <div class="static-bubble" style="top: 85%; right: -2%; width: 350px; height: 350px; z-index: -1; opacity: 0.5;"></div>
+
+        <!-- Hero sekce podstránky -->
+        <section class="hero relative" style="padding: 14rem 0 8rem; background: transparent;">
+            <div class="container" data-aos="fade-up">
+                <h1 style="text-align: center; color: var(--color-deep-water); font-size: 4rem;">Staráme se o váš bazén po celý rok.</h1>
+                <div style="text-align: center; max-width: 800px; margin: 0 auto; font-size: 1.25rem;">
+                    <p style="margin: 0 auto 2.5rem; max-width: 800px;">Odzimování, zazimování i průběžný servis — vše na jednom místě.</p>
+                </div>
+                <div class="hero-actions" style="justify-content: center; gap: 1.5rem;">
+                    <a href="#kontakt-cta" class="btn btn-primary">Domluvit servis</a>
+                    <a href="#prehled" class="btn btn-outline">Zobrazit služby</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sekce se servisními bloky (Alternující bloky) -->
+        <section id="service-details" class="pool-alternating-section relative" style="padding-bottom: 8rem; padding-top: 0;">
+            <span id="prehled" style="position: absolute; top: -100px;"></span>
+            <div class="container">
+
+                <div class="pool-alt-block" id="detail-odzimovani">
+                    <div class="pool-alt-top">
+                        <div class="pool-alt-photo">
+                            <div class="pool-alt-img" style="background: rgba(116,183,215,0.15); display:flex; align-items:center; justify-content:center; min-height:300px; border-radius:var(--radius-lg);">
+                                <span style="color:var(--color-logo-dark); font-family:'IBM Plex Mono',monospace; font-size:0.85rem; opacity:0.6;">Foto bude doplněno</span>
+                            </div>
+                        </div>
+                        <div class="pool-alt-content">
+                            <span class="card-number-heading">01 /</span>
+                            <h3>Odzimování bazénu</h3>
+                            <p class="pool-alt-claim">Správné otevření sezóny je základem zdravé vody a funkční technologie. Postaráme se o vše — od vyčištění po první chemii.</p>
+                            <div class="benefits-box-dark">
+                                <h3>Co zahrnuje:</h3>
+                                <ul>
+                                    <li><i class="ph-fill ph-check-circle"></i> Kontrola a čištění bazénové vany</li>
+                                    <li><i class="ph-fill ph-check-circle"></i> Montáž a spuštění filtrace a čerpadla</li>
+                                    <li><i class="ph-fill ph-check-circle"></i> Kontrola těsnosti a spojů</li>
+                                    <li><i class="ph-fill ph-check-circle"></i> Úprava chemie vody</li>
+                                    <li><i class="ph-fill ph-check-circle"></i> Kontrola zastřešení (pokud ho máte)</li>
+                                </ul>
+                            </div>
+                            <p style="margin-top: 1.5rem; margin-bottom: 0.25rem; font-weight: 700; color: var(--color-deep-water); font-size: 1.15rem;">od 2 999 Kč bez DPH</p>
+                            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.5rem; max-width: none;">Cena závisí na velikosti bazénu a stavu technologie. Přesnou cenu sdělíme po obhlídce.</p>
+                            <a href="#kontakt-cta" class="btn btn-primary">Domluvit odzimování →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pool-alt-block pool-alt-block--reverse" id="detail-zazimovani">
+                    <div class="pool-alt-top">
+                        <div class="pool-alt-photo">
+                            <div class="pool-alt-img" style="background: rgba(116,183,215,0.15); display:flex; align-items:center; justify-content:center; min-height:300px; border-radius:var(--radius-lg);">
+                                <span style="color:var(--color-logo-dark); font-family:'IBM Plex Mono',monospace; font-size:0.85rem; opacity:0.6;">Foto bude doplněno</span>
+                            </div>
+                        </div>
+                        <div class="pool-alt-content">
+                            <span class="card-number-heading">02 /</span>
+                            <h3>Zazimování bazénu</h3>
+                            <p class="pool-alt-claim">Správně zazimovaný bazén přežije zimu bez poškození. Zajistíme, aby byl na jaře připravený — bez překvapení.</p>
+                            <div class="benefits-box-dark">
+                                <h3>Co zahrnuje:</h3>
+                                <ul>
+                                    <li><i class="ph-fill ph-check-circle"></i> Vyčištění bazénu před zimou</li>
+                                    <li><i class="ph-fill ph-check-circle"></i> Demontáž a uskladnění čerpadla a filtrace</li>
+                                    <li><i class="ph-fill ph-check-circle"></i> Snížení hladiny vody</li>
+                                    <li><i class="ph-fill ph-check-circle"></i> Zimní chemická úprava vody</li>
+                                    <li><i class="ph-fill ph-check-circle"></i> Zakrytí bazénu zimní plachtou</li>
+                                </ul>
+                            </div>
+                            <p style="margin-top: 1.5rem; margin-bottom: 0.25rem; font-weight: 700; color: var(--color-deep-water); font-size: 1.15rem;">od 2 999 Kč bez DPH</p>
+                            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.5rem; max-width: none;">Cena závisí na velikosti bazénu a stavu technologie. Přesnou cenu sdělíme po obhlídce.</p>
+                            <a href="#kontakt-cta" class="btn btn-primary">Domluvit zazimování →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pool-alt-block" id="detail-servis-technologii">
+                    <div class="pool-alt-top">
+                        <div class="pool-alt-photo">
+                            <div class="pool-alt-img" style="background: rgba(116,183,215,0.15); display:flex; align-items:center; justify-content:center; min-height:300px; border-radius:var(--radius-lg);">
+                                <span style="color:var(--color-logo-dark); font-family:'IBM Plex Mono',monospace; font-size:0.85rem; opacity:0.6;">Foto bude doplněno</span>
+                            </div>
+                        </div>
+                        <div class="pool-alt-content">
+                            <span class="card-number-heading">03 /</span>
+                            <h3>Servis a opravy technologií</h3>
+                            <p class="pool-alt-claim">Čerpadlo, filtrace, protiproud nebo osvětlení — servisujeme vše. Rychle, spolehlivě, s díly na skladě.</p>
+                            <div class="benefits-box-dark">
+                                <h3>Co zahrnuje:</h3>
+                                <ul>
+                                    <li><i class="ph-fill ph-check-circle"></i> Diagnostika a oprava čerpadel</li>
+                                    <li><i class="ph-fill ph-check-circle"></i> Servis filtrací a řídicích jednotek</li>
+                                    <li><i class="ph-fill ph-check-circle"></i> Opravy protiproudu a trysek</li>
+                                    <li><i class="ph-fill ph-check-circle"></i> Výměna osvětlení včetně LED retrofit</li>
+                                    <li><i class="ph-fill ph-check-circle"></i> Poradenství při modernizaci technologie</li>
+                                </ul>
+                            </div>
+                            <div style="margin-top: 1.5rem;">
+                                <a href="#kontakt-cta" class="btn btn-primary">Poptat servis →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Kontaktní formulář stejný jako na hlavní stránce -->
+        <section class="cta-section relative" id="kontakt-cta">
+            <div class="wave-divider wave-top">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,115.54,192.5,99.5,236.4,88.16,280.45,64.04,321.39,56.44Z" class="shape-fill"></path>
+                </svg>
+            </div>
+
+            <div class="container relative z-10" data-aos="zoom-in" style="padding-top: 2rem; padding-bottom: 2rem;">
+                <div class="grid-2 align-center">
+                    <div class="contact-details text-left">
+                        <h2 style="color: white; margin-bottom: 1.5rem;">Rádi s vámi probereme váš projekt</h2>
+                        <p style="color: white; font-size: 1.1rem; margin-bottom: 2rem; max-width: none;">Máte konkrétní představu, nebo teprve vybíráte? Napište nám nebo zavolejte. Rádi s vámi projdeme, jaký typ bazénu bude ve vašem případě dávat největší smysl.</p>
+                        <div style="margin-bottom: 2rem;">
+                            <p style="color: white; margin-bottom: 0.5rem; font-weight: 500; font-size: 1.1rem;"><i class="ph ph-phone" style="color: var(--color-fog); margin-right: 10px;"></i> 777 067 127</p>
+                            <p style="color: white; margin-bottom: 0.5rem; font-weight: 500; font-size: 1.1rem;"><i class="ph ph-envelope" style="color: var(--color-fog); margin-right: 10px;"></i> info@krejcirikbazeny.cz</p>
+                            <p style="color: white; margin-bottom: 0.5rem; font-weight: 500; font-size: 1.1rem;"><i class="ph ph-map-pin" style="color: var(--color-fog); margin-right: 10px;"></i> K Hrnčířům 216, 149 00 Praha 4, Šeberov</p>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <h3 style="margin-bottom: 1.5rem; color: var(--color-deep-water);">Domluvte servis nebo se jen zeptejte</h3>
+                        <form id="poolContactForm2" onsubmit="event.preventDefault(); document.getElementById('poolContactForm2').style.display='none'; document.getElementById('formSuccessMessage2').classList.add('success');">
+                            <div class="form-group">
+                                <label for="name2">Jméno a příjmení</label>
+                                <input type="text" id="name2" class="form-control" required>
+                            </div>
+                            <div class="grid-2" style="gap: 1.5rem;">
+                                <div class="form-group">
+                                    <label for="email2">E-mail</label>
+                                    <input type="email" id="email2" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone2">Telefon</label>
+                                    <input type="tel" id="phone2" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="pool_type2">O jaký typ bazénu máte zájem?</label>
+                                <select id="pool_type2" class="form-control">
+                                    <option value="Laminátový">Laminátové bazény</option>
+                                    <option value="Těžká fólie">Bazény z těžké fólie</option>
+                                    <option value="Mozaikový">Mozaikové bazény</option>
+                                    <option value="Nevím">Zatím vybírám / Nevím</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="priority2">Co je pro vás při výběru důležité?</label>
+                                <input type="text" id="priority2" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="note2">Poznámka</label>
+                                <textarea id="note2" class="form-control" placeholder="Např. rozměr, představa o tvaru, nová realizace / rekonstrukce, termín, doplňující dotaz"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Odeslat nezávaznou poptávku</button>
+                        </form>
+                        <div id="formSuccessMessage2" class="form-message mt-4">
+                            <h4 style="color: var(--color-deep-water); margin-bottom: 0.5rem; font-size: 1.25rem;">Děkujeme, ozvali jste se nám. Vaši zprávu jsme přijali.</h4>
+                            <p style="margin-bottom: 1rem; color: var(--color-deep-water);">Ozveme se vám co nejdříve.</p>
+                            <p style="font-size: 0.95rem; color: var(--color-deep-water);">Pokud máte raději rychlejší domluvu, můžete nám rovnou zavolat na <strong>777 067 127</strong>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wave-divider wave-bottom">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,115.54,192.5,99.5,236.4,88.16,280.45,64.04,321.39,56.44Z" class="shape-fill-footer"></path>
+                </svg>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Patička -->
+    <footer class="footer">
+        <div class="container grid-3">
+            <div>
+                <a href="index.html#domu" class="logo">Krejčiřík <span>Bazény</span></a>
+                <p class="footer-claim mt-4">Prémiové realizace a profesionální péče o bazény po celé České republice.</p>
+            </div>
+            <div class="footer-nav">
+                <a href="index.html#bazeny">Nové bazény</a>
+                <a href="index.html#servis">Servis a péče</a>
+                <a href="index.html#realizace">Ukázky realizací</a>
+                <a href="#kontakt-cta">Kontaktujte nás</a>
+            </div>
+            <div class="footer-legal text-right">
+                <div class="social-links">
+                    <a href="#"><i class="ph ph-instagram-logo"></i></a>
+                    <a href="#"><i class="ph ph-facebook-logo"></i></a>
+                </div>
+                <p>IČ: 12345678</p>
+                <p>&copy; 2026 Krejčiřík Bazény</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out',
+            once: true,
+            offset: 50
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
