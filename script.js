@@ -245,3 +245,22 @@ function activatePoolFromHash() {
 }
 window.addEventListener('hashchange', activatePoolFromHash);
 window.addEventListener('DOMContentLoaded', activatePoolFromHash);
+
+// Animated reveal of "Hlavní výhody" bullets (bazeny.html)
+const advantageObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const items = entry.target.querySelectorAll('.pool-advantages-item');
+      items.forEach((item, index) => {
+        setTimeout(() => {
+          item.classList.add('visible');
+        }, index * 150);
+      });
+      advantageObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.2 });
+
+document.querySelectorAll('.pool-alt-content .benefits-box-dark').forEach(card => {
+  advantageObserver.observe(card);
+});
