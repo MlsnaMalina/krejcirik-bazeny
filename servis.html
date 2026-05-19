@@ -47,6 +47,67 @@
             margin-top: 0.1rem;
             flex-shrink: 0;
         }
+
+        .tech-carousel {
+            position: relative;
+            width: 100%;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            background: var(--color-deep-water);
+        }
+        .tech-carousel-track {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 4 / 3;
+        }
+        .tech-carousel-img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        .tech-carousel-img.active {
+            opacity: 1;
+        }
+        .tech-carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: none;
+            background: rgba(255, 255, 255, 0.85);
+            color: var(--color-deep-water);
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+        }
+        .tech-carousel-btn:hover {
+            background: white;
+            transform: translateY(-50%) scale(1.05);
+        }
+        .tech-carousel-prev { left: 1rem; }
+        .tech-carousel-next { right: 1rem; }
+        .tech-carousel-counter {
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+            background: rgba(14, 42, 54, 0.75);
+            color: white;
+            padding: 0.4rem 0.85rem;
+            border-radius: 999px;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.85rem;
+        }
     </style>
 </head>
 <body>
@@ -180,8 +241,21 @@
                 <div class="pool-alt-block" id="servis-technologii">
                     <div class="pool-alt-top">
                         <div class="pool-alt-photo">
-                            <div class="pool-alt-img" style="background: rgba(116,183,215,0.15); display:flex; align-items:center; justify-content:center; min-height:300px; border-radius:var(--radius-lg);">
-                                <span style="color:var(--color-logo-dark); font-family:'IBM Plex Mono',monospace; font-size:0.85rem; opacity:0.6;">Foto bude doplněno</span>
+                            <div class="tech-carousel" id="techCarousel">
+                                <div class="tech-carousel-track">
+                                    <img src="images/technologie-1.jpeg" alt="Technologie bazénu 1" class="tech-carousel-img active">
+                                    <img src="images/technologie-2.jpeg" alt="Technologie bazénu 2" class="tech-carousel-img">
+                                    <img src="images/technologie-3.jpeg" alt="Technologie bazénu 3" class="tech-carousel-img">
+                                    <img src="images/technologie-4.jpeg" alt="Technologie bazénu 4" class="tech-carousel-img">
+                                    <img src="images/technologie-5.jpeg" alt="Technologie bazénu 5" class="tech-carousel-img">
+                                    <img src="images/technologie-6.jpeg" alt="Technologie bazénu 6" class="tech-carousel-img">
+                                    <img src="images/technologie-7.jpeg" alt="Technologie bazénu 7" class="tech-carousel-img">
+                                    <img src="images/technologie-8.jpeg" alt="Technologie bazénu 8" class="tech-carousel-img">
+                                    <img src="images/technologie-9.jpeg" alt="Technologie bazénu 9" class="tech-carousel-img">
+                                </div>
+                                <button class="tech-carousel-btn tech-carousel-prev" aria-label="Předchozí"><i class="ph ph-caret-left"></i></button>
+                                <button class="tech-carousel-btn tech-carousel-next" aria-label="Další"><i class="ph ph-caret-right"></i></button>
+                                <div class="tech-carousel-counter"><span id="techCarouselCurrent">1</span> / 9</div>
                             </div>
                         </div>
                         <div class="pool-alt-content">
@@ -316,5 +390,24 @@
         });
     </script>
     <script src="script.js"></script>
+    <script>
+        (function() {
+            const carousel = document.getElementById('techCarousel');
+            if (!carousel) return;
+            const slides = carousel.querySelectorAll('.tech-carousel-img');
+            const counter = document.getElementById('techCarouselCurrent');
+            const prevBtn = carousel.querySelector('.tech-carousel-prev');
+            const nextBtn = carousel.querySelector('.tech-carousel-next');
+            let idx = 0;
+            function show(n) {
+                slides[idx].classList.remove('active');
+                idx = (n + slides.length) % slides.length;
+                slides[idx].classList.add('active');
+                if (counter) counter.textContent = idx + 1;
+            }
+            prevBtn.addEventListener('click', () => show(idx - 1));
+            nextBtn.addEventListener('click', () => show(idx + 1));
+        })();
+    </script>
 </body>
 </html>
