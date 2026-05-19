@@ -1035,7 +1035,7 @@ textarea.form-control {
 }
 
 .salt-pool-section {
-  background: var(--color-fog);
+  background: rgba(116, 183, 215, 0.12);
   padding: var(--section-padding, 4rem 0);
 }
 .salt-pool-header {
@@ -1118,3 +1118,6 @@ textarea.form-control {
     grid-template-columns: 1fr;
   }
 }
+
+.salt-pool-steps li { align-items: baseline; }
+.salt-pool-steps .card-number-heading { white-space: nowrap; }
