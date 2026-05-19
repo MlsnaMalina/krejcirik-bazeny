@@ -186,7 +186,7 @@
         </div>
         
         <div class="container grid-3 mt-4">
-            <div class="card premium-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="card premium-card" data-aos="fade-up" data-aos-delay="100" onclick="window.location='bazeny.html'" style="cursor: pointer;">
                 <div class="card-img-box">
                     <img src="images/hero_pool.png" alt="Typy bazénů">
                     <div class="card-overlay"><i class="ph ph-magnifying-glass-plus"></i></div>
@@ -196,7 +196,7 @@
                     <p>Laminátové bazény, bazény z těžké fólie a prémiové mozaikové bazény pro individuální design.</p>
                 </div>
             </div>
-            <div class="card premium-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="card premium-card" data-aos="fade-up" data-aos-delay="200" onclick="window.location='bazeny.html#salt-pool-section'" style="cursor: pointer;">
                 <div class="card-img-box">
                     <img src="images/crystal_water.png" alt="Slaná voda">
                     <div class="card-overlay"><i class="ph ph-drop"></i></div>
@@ -206,7 +206,7 @@
                     <p>Šetrnější k pokožce i očím, ekologičtější a celkově pohodlnější způsob celoročního provozu.</p>
                 </div>
             </div>
-            <div class="card premium-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="card premium-card" id="card-zastreseni" data-aos="fade-up" data-aos-delay="300" onclick="openZastreseniModal()" style="cursor: pointer;">
                 <div class="card-img-box">
                     <img src="images/pool_enclosure.png" alt="Zastřešení">
                     <div class="card-overlay"><i class="ph ph-house-line"></i></div>
@@ -539,8 +539,50 @@
         <button class="lightbox-btn lightbox-next"><i class="ph ph-caret-right"></i></button>
     </div>
 
+    <!-- Modal: Zastřešení bazénu -->
+    <div class="modal-overlay" id="modal-zastreseni">
+      <div class="modal-box">
+        <button class="modal-close" onclick="closeZastreseniModal()" aria-label="Zavřít">
+          <i class="ph-fill ph-x"></i>
+        </button>
+        <div class="modal-photo">
+          <img src="images/bazen-zastreseni.jpeg" alt="Zastřešení bazénu">
+        </div>
+        <div class="modal-content">
+          <span class="card-number-heading">Doplňková služba</span>
+          <h2>Zastřešení bazénu</h2>
+          <p class="modal-intro">Zastřešení bazénu není jen estetickým doplňkem, ale především praktickým řešením, které usnadní péči o bazén a zvýší komfort při koupání. Díky moderním materiálům a preciznímu zpracování získáte více než jen ochranu před počasím.</p>
+          <ul class="modal-list">
+            <li><i class="ph-fill ph-check-circle"></i> <strong>Prodloužení sezóny</strong> — koupání od jara až do podzimu</li>
+            <li><i class="ph-fill ph-check-circle"></i> <strong>Ochrana vody</strong> — minimum nečistot, méně chemie, snadnější údržba</li>
+            <li><i class="ph-fill ph-check-circle"></i> <strong>Úspora energie</strong> — voda se rychleji ohřívá a pomaleji chladne</li>
+            <li><i class="ph-fill ph-check-circle"></i> <strong>Bezpečnost</strong> — spolehlivá ochrana pro děti i domácí mazlíčky</li>
+            <li><i class="ph-fill ph-check-circle"></i> <strong>Estetika na míru</strong> — různé tvary, výšky a barvy ladící s okolím zahrady</li>
+          </ul>
+          <p class="modal-closing">Investice do zastřešení se vrátí v podobě pohodlí, úspor a delší životnosti vašeho bazénu.</p>
+          <a href="index.html#kontakt" class="btn btn-primary">Nezávazně poptat zastřešení →</a>
+        </div>
+      </div>
+    </div>
+
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
+    <script>
+      function openZastreseniModal() {
+        document.getElementById('modal-zastreseni').classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+      function closeZastreseniModal() {
+        document.getElementById('modal-zastreseni').classList.remove('active');
+        document.body.style.overflow = '';
+      }
+      document.getElementById('modal-zastreseni').addEventListener('click', function(e) {
+        if (e.target === this) closeZastreseniModal();
+      });
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeZastreseniModal();
+      });
+    </script>
 </body>
 </html>
