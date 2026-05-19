@@ -125,8 +125,8 @@ section { padding: 6rem 0; }
 .header-inner { display: flex; justify-content: space-between; align-items: center; height: 90px; }
 .logo { font-size: 1.75rem; font-weight: 800; color: var(--bg-dark); text-decoration: none; }
 .logo span { color: var(--primary); }
-.nav { display: flex; gap: 2.5rem; }
-.nav a { text-decoration: none; color: var(--text-main); font-weight: 500; transition: var(--transition-fast); }
+.nav { display: flex; gap: 1.25rem; flex-wrap: nowrap; white-space: nowrap; }
+.nav a { text-decoration: none; color: var(--text-main); font-weight: 500; font-size: 0.85rem; transition: var(--transition-fast); }
 .nav a:hover, .nav a.active { color: var(--primary); }
 
 
@@ -1025,3 +1025,11 @@ textarea.form-control {
 .lightbox-close { top: 1.5rem; right: 1.5rem; }
 .lightbox-prev { left: 1.5rem; top: 50%; transform: translateY(-50%); }
 .lightbox-next { right: 1.5rem; top: 50%; transform: translateY(-50%); }
+
+.pool-alt-photo--small {
+  max-height: 260px;
+}
+.pool-alt-photo--small img {
+  max-height: 260px;
+  object-fit: cover;
+}
