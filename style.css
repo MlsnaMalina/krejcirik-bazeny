@@ -1138,13 +1138,14 @@ textarea.form-control {
 .modal-box {
   background: white;
   border-radius: 24px;
-  max-width: 900px;
+  max-width: 1100px;
   width: 100%;
-  max-height: 88vh;
+  max-height: 95vh;
   overflow: hidden;
   position: relative;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1.05fr;
+  align-items: stretch;
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
 }
 .modal-close {
@@ -1170,26 +1171,30 @@ textarea.form-control {
   background: white;
 }
 .modal-photo {
-  border-radius: 24px 0 0 24px;
-  overflow: hidden;
-  min-height: 500px;
+  padding: 2rem 0 2rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
 }
 .modal-photo img {
   width: 100%;
   height: 100%;
+  max-height: calc(95vh - 4rem);
   object-fit: cover;
   display: block;
+  border-radius: 16px;
 }
 .modal-content {
-  padding: 3rem 2.5rem;
+  padding: 2.5rem 2.5rem 2.5rem 2rem;
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 1rem;
   overflow-y: auto;
 }
 .modal-content h2 {
   color: var(--color-deep-water);
-  font-size: 2rem;
+  font-size: 1.75rem;
   margin: 0;
   line-height: 1.2;
 }
@@ -1232,15 +1237,18 @@ textarea.form-control {
 @media (max-width: 640px) {
   .modal-box {
     grid-template-columns: 1fr;
-    max-height: 92vh;
+    max-height: 95vh;
     overflow-y: auto;
     border-radius: 16px;
   }
   .modal-photo {
-    border-radius: 16px 16px 0 0;
-    min-height: 220px;
+    padding: 1.25rem 1.25rem 0 1.25rem;
+    min-height: 200px;
+  }
+  .modal-photo img {
+    max-height: 220px;
   }
   .modal-content {
-    padding: 2rem 1.5rem;
+    padding: 1.5rem 1.25rem 2rem 1.25rem;
   }
 }
