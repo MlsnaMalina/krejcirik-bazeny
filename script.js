@@ -264,3 +264,50 @@ const advantageObserver = new IntersectionObserver((entries) => {
 document.querySelectorAll('.pool-alt-content .benefits-box-dark').forEach(card => {
   advantageObserver.observe(card);
 });
+
+// Unik vody gallery lightbox
+(function(){
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const galleryItems = Array.from(document.querySelectorAll('.gallery-item'));
+  if (!lightbox || !lightboxImg || galleryItems.length === 0) return;
+  let currentIndex = 0;
+
+  function openLightbox(index) {
+    currentIndex = index;
+    lightboxImg.src = galleryItems[index].href;
+    lightboxImg.alt = galleryItems[index].querySelector('img').alt;
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+  function showPrev() {
+    currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+    lightboxImg.src = galleryItems[currentIndex].href;
+  }
+  function showNext() {
+    currentIndex = (currentIndex + 1) % galleryItems.length;
+    lightboxImg.src = galleryItems[currentIndex].href;
+  }
+
+  galleryItems.forEach((item, index) => {
+    item.addEventListener('click', e => {
+      e.preventDefault();
+      openLightbox(index);
+    });
+  });
+
+  document.getElementById('lightbox-close')?.addEventListener('click', closeLightbox);
+  document.getElementById('lightbox-prev')?.addEventListener('click', showPrev);
+  document.getElementById('lightbox-next')?.addEventListener('click', showNext);
+  lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+  document.addEventListener('keydown', e => {
+    if (!lightbox.classList.contains('active')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') showPrev();
+    if (e.key === 'ArrowRight') showNext();
+  });
+})();
