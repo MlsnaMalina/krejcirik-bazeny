@@ -851,9 +851,6 @@ textarea.form-control {
   padding: var(--section-padding, 4rem 0);
 }
 .pool-alt-block {
-  display: flex;
-  align-items: flex-start;
-  gap: 3rem;
   margin-bottom: 4rem;
   padding-bottom: 4rem;
   border-bottom: 1px solid rgba(13, 123, 187, 0.12);
@@ -862,8 +859,17 @@ textarea.form-control {
   border-bottom: none;
   margin-bottom: 0;
 }
-.pool-alt-block--reverse {
+.pool-alt-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+  margin-bottom: 2rem;
+}
+.pool-alt-block--reverse .pool-alt-top {
   flex-direction: row-reverse;
+}
+.pool-alt-bottom {
+  padding: 0 0.5rem;
 }
 .pool-alt-photo {
   width: 45%;
@@ -926,9 +932,8 @@ textarea.form-control {
   margin-top: 0.5rem;
 }
 @media (max-width: 768px) {
-  .pool-alt-block,
-  .pool-alt-block--reverse {
-    flex-direction: column;
+  .pool-alt-top {
+    flex-direction: column !important;
   }
   .pool-alt-photo {
     width: 100%;
