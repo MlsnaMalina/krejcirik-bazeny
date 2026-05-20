@@ -641,7 +641,10 @@ section { padding: 6rem 0; }
 
 /* Styly kontaktního formuláře */
 .contact-form {
-    background: white;
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
     padding: 3rem;
     border-radius: var(--radius-xl);
     box-shadow: var(--shadow-xl);
