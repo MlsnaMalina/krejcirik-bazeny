@@ -311,3 +311,28 @@ document.querySelectorAll('.pool-alt-content .benefits-box-dark').forEach(card =
     if (e.key === 'ArrowRight') showNext();
   });
 })();
+
+// ── Modal: Návod na čištění ──────────────────────────────────────
+function openNavodModal() {
+  const modal = document.getElementById('navod-modal');
+  if (!modal) return;
+  modal.classList.add('is-open');
+  document.body.style.overflow = 'hidden';
+  modal.querySelector('.navod-modal-close')?.focus();
+}
+
+function closeNavodModal() {
+  const modal = document.getElementById('navod-modal');
+  if (!modal) return;
+  modal.classList.remove('is-open');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeNavodModal();
+});
+
+document.getElementById('navod-modal')?.addEventListener('click', function(e) {
+  if (e.target === this) closeNavodModal();
+});
+

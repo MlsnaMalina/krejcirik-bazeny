@@ -148,6 +148,9 @@
                 <div class="hero-actions" style="justify-content: center; gap: 1.5rem;">
                     <a href="#kontakt-cta" class="btn btn-primary">Domluvit servis</a>
                     <a href="#prehled" class="btn btn-outline">Zobrazit služby</a>
+                    <button class="btn btn-outline" onclick="openNavodModal()">
+                        <i class="ph-fill ph-drop"></i> Návod na čištění bazénů
+                    </button>
                 </div>
             </div>
         </section>
@@ -393,6 +396,79 @@
         });
     </script>
     <script src="script.js"></script>
+    <!-- Modal: Návod na čištění bazénů -->
+    <div id="navod-modal" class="navod-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="navod-modal-title">
+      <div class="navod-modal-box">
+        <button class="navod-modal-close" onclick="closeNavodModal()" aria-label="Zavřít">&times;</button>
+
+        <div class="navod-modal-header">
+          <h2 id="navod-modal-title">Návod na čištění zahradního bazénu</h2>
+          <p>Údržba čistého zahradního bazénu je klíčová pro jeho dlouhou životnost a zdraví uživatelů. Tento návod vám krok za krokem ukáže, jak správně pečovat o svůj bazén.</p>
+        </div>
+
+        <div class="navod-modal-content">
+
+          <div class="navod-step">
+            <span class="navod-step-number">01 /</span>
+            <div>
+              <h3>Příprava na čištění</h3>
+              <p>Než začnete s čištěním, ujistěte se, že máte všechny potřebné nástroje a vybavení. Patří sem síťka na listí, bazénový kartáč, vysavač, testovací souprava a chemikálie na údržbu vody. Nezapomeňte zkontrolovat hladinu vody v bazénu a případně ji doplnit, aby byla na optimální úrovni.</p>
+            </div>
+          </div>
+
+          <div class="navod-step">
+            <span class="navod-step-number">02 /</span>
+            <div>
+              <h3>Odstranění nečistot</h3>
+              <p>Začněte s odstraňováním nečistot na povrchu bazénu. Použijte síťku na listí k odstranění listí, hmyzu a jiných drobných nečistot z hladiny. Pokud máte bazén s filtrací, zkontrolujte a vyčistěte filtrační košík.</p>
+              <p>Dále se zaměřte na dno a stěny bazénu. Bazénový kartáč a vysavač odstraní usazeniny a nečistoty. Pravidelnost předchází tvorbě řas.</p>
+            </div>
+          </div>
+
+          <div class="navod-step">
+            <span class="navod-step-number">03 /</span>
+            <div>
+              <h3>Údržba vody</h3>
+              <p>Pomocí testovací soupravy zkontrolujte pH a hladiny chloru. Ideální pH je 7,2–7,6, chlor by se měl pohybovat mezi 1 a 3 ppm. Pokud hodnoty nejsou v rozmezí, upravte je chemikáliemi z obchodu s bazénovým vybavením.</p>
+            </div>
+          </div>
+
+          <div class="navod-step">
+            <span class="navod-step-number">04 /</span>
+            <div>
+              <h3>Čištění okrajů bazénu</h3>
+              <p>Okraje bazénu jsou náchylné k usazování řas a nečistot. Použijte kartáč nebo speciální čistič na bazénové okraje. Pravidelné čištění předchází vzniku skvrn a řas.</p>
+            </div>
+          </div>
+
+          <div class="navod-step">
+            <span class="navod-step-number">05 /</span>
+            <div>
+              <h3>Kontrola a údržba zařízení</h3>
+              <p>Po vyčištění zkontrolujte, zda všechna zařízení fungují správně — čerpadlo i filtrace. Slabý tlak vody nebo neefektivní filtrace řešte okamžitě.</p>
+            </div>
+          </div>
+
+          <div class="navod-step">
+            <span class="navod-step-number">06 /</span>
+            <div>
+              <h3>Prevence</h3>
+              <p>Používejte kryt bazénu, když není v použití. Minimalizujete množství nečistot a prodloužíte životnost bazénu i technologií.</p>
+            </div>
+          </div>
+
+        </div><!-- /.navod-modal-content -->
+
+        <div class="navod-modal-footer">
+          <a href="navod-cisteni-bazenu.pdf" download class="btn btn-primary">
+            <i class="ph-fill ph-download-simple"></i> Stáhnout jako PDF
+          </a>
+          <button class="btn btn-outline" onclick="closeNavodModal()">Zavřít</button>
+        </div>
+
+      </div><!-- /.navod-modal-box -->
+    </div>
+
     <script>
         (function() {
             const carousel = document.getElementById('techCarousel');
